@@ -1,148 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Andrew Vernier</title>
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicons
-    ================================================== -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <title>Andrew M. Vernier</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Stylesheet
-    ================================================== -->
-<link rel="stylesheet" type="text/css"  href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60" class="fade-in fade-in-1">
 
 <!-- Header -->
-<header id="header">
-  <div class="intro text-center">
-    <div class="overlay">
-      <div class="container">
+<div id="header" style="">
+    <div class="container">
         <div class="row">
-          <div class="intro-text">
-            <h1>Andrew Vernier</h1>
-            <p>University of Michigan - Computer Science Engineering</p>
+            <div class="col fade-in fade-in-2">
+                <h1>Andrew M. Vernier</h1>
+                <p>University of Michigan - Computer Science Engineering</p>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</header>
-<!-- Navigation -->
-<div id="nav">
-  <nav class="navbar navbar-custom">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-      </div>
-      
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-          <li class="hidden"> <a href="#page-top"></a> </li>
-          <li> <a class="page-scroll" href="#page-top">Home</a> </li>
-          <li> <a class="page-scroll" href="#about">About</a> </li>
-          <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 </div>
 
-<!-- About Section -->
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top fade-in fade-in-1">
+    <div class="container-fluid">
+        <div class="navbar-header" id="header-logo">
+            <a class="navbar-brand scroll" href="#header">AMV</a>
+        </div>
+
+        <div class="navbar-header" id="header-button">
+            <button type="button" id="navbar-btn" class="navbar-toggler" data-toggle="collapse" data-target="#collapsible-navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapsible-navbar">
+            <ul class="navbar-nav text-uppercase">
+                <li class="nav-item">
+                    <a class="nav-link scroll internal-page-link" href="#header">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll internal-page-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll internal-page-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link external-page-link" href="experiences.html">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link external-page-link" href="publications.html">Publications</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- About -->
 <div id="about">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>About</h2>
-      <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="section-header">About</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <img src="img/andrew.jpg" class="img-fluid rounded" id="about-portrait" alt="">
+            </div>
+            <div class="col-xs-12 col-md-6 about-info">
+                <div class="about-text">
+                    <p>
+                        My name is Andrew and I am a computer science student at the University of Michigan's College of Engineering.
+                        I have passions for programming, learning new things, and fitness and it is my goal to use these passions to positively impact the lives of others.
+                        My academic interests lie in artificial intelligence, autonomy, and robotics.
+                        I am currently exploring these interests through the <a href="http://croma.eecs.umich.edu/croma.html">Crowds and Machines (CROMA) Lab</a> advised by <a href="http://croma.eecs.umich.edu/index.html">Dr. Walter S. Lasecki</a> and the <a href="https://mrover.org">Michigan Mars Rover Team (MRover)</a>.
+                        In the CROMA Lab, I am researching hybrid intelligence systems (combining human and artificial intelligence) and human-computer interaction. On MRover, I am a senior advising member and former lead of the autonomous navigation subteam.
+                        In my free time, I enjoy hockey, college football, and sub-par golf.
+                    </p>
+                    <div class="center-button-wrapper">
+                        <a href="files/andrew_vernier_resume.pdf" class="btn btn-primary btn-lg page-scroll custom-button">My Resume</a></div>
+                    </div>
+              </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-6"> <img src="img/andrew.jpg" class="img-responsive" alt=""> </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="about-text">
-          <p>My name is Andrew and I am a computer science student at the University of Michigan. 
-            I have passions for programming, learning, and fitness and it is my goal to use these passions to positively impact the lives of others. 
-            My academic interests lie in artificial intelligence and autonomy. 
-            I am currently exploring these interests through the CROMA Lab and the Michigan Mars Rover Team (MRover). 
-            On MRover, I am the autonomous navigation lead where my team is tasked with developing the self-driving capabilities for our rover.
-            In my free time, I enjoy hockey, college football, and sub-par golf.
-          </p>
-          <a href="files/andrew_vernier_resume.pdf" class="btn btn-primary btn-lg page-scroll">My Resume</a></div>
-      </div>
-    </div>
-  </div>
 </div>
 
-<!-- Contact Section -->
-<div id="contact" class="text-center">
-  <div class="overlay">
+<!-- Contact -->
+<div id="contact">
     <div class="container">
-      <div class="section-title center">
-        <h2>Get In Touch</h2>
-        <hr>
-      </div>
-      <div class="col-md-8 col-md-offset-2">
-        <!-- <form method="POST" action="https://formspree.io/amverni@umich.edu">
-          <input type="hidden" name="subject" value="Contact request from personal website" />
-          <input type="text" name="name" class="form-control" placeholder="Name" required="required">
-          <input type="email" name="email" class="form-control" placeholder="Email" required="required">
-          <textarea name="message" class="form-control" rows="4" placeholder="Message" required="required"></textarea>
-          <input type="text" name="_gotcha" style="display:none" />
-          <button type="submit" class="btn btn-default">Send Message</button>
-        </form> -->
-        <p id="email-address">amverni@umich.edu</p>
-        <div class="social">
-          <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=100009483842716"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/amvernier"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/amverni"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.instagram.com/avernier14/"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/andrew-vernier/"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
+        <div class="row">
+            <div class="col">
+                <h2 class="section-header">Contact</h2>
+                <hr>
+            </div>
         </div>
-      </div>
+        <form action="https://formsubmit.co/amverni@umich.edu" method="POST">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 contact-form">
+                    <input type="textarea" name="name" class="form-control" placeholder="Name" required="required">
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-md-6 contact-form">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-12 contact-form">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-12 contact-form">
+                    <textarea name="message" class="form-control" rows="4" placeholder="Message" required="required"></textarea>
+                </div>
+            </div>
+            <input type="text" name="_gotcha" style="display:none">
+            <div class="center-button-wrapper">
+                <button type="submit" class="btn btn-primary btn-lg custom-button">Send Message</button>
+            </div>
+            <input type="hidden" name="_next" value="https://amverni.github.io"/>
+        </form>
+
+        <div class="row">
+            <div class="col social">
+                <ul class="social-icons list-inline">
+                    <li class="list-inline-item">
+                        <div class="social-icon-container">
+                            <a href="https://github.com/amverni"><i class="fa fa-github fa-2x"></i></a>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="social-icon-container">
+                            <a href="https://www.linkedin.com/in/andrew-vernier/" class="fa fa-linkedin fa-2x"></a>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="social-icon-container">
+                            <a href="https://www.facebook.com/profile.php?id=100009483842716" class="fa fa-facebook fa-2x"></a>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="social-icon-container">
+                            <a href="https://twitter.com/amvernier" class="fa fa-twitter fa-2x"></a>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="social-icon-container">
+                            <a href="https://www.instagram.com/avernier14/" class="fa fa-instagram fa-2x"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-<div id="footer">
-  <div class="container text-center">
-    <div class="fnav">
-      <p>Copyright &copy; 2018 Andrew Vernier. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Copyright &copy 2019 &nbsp&nbsp&nbsp&nbsp Andrew M. Vernier &nbsp&nbsp&nbsp&nbsp <a href="mailto:amverni@umich.edu"><i class="fa fa-envelope"></i></a></p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script> 
-<script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/easypiechart.js"></script> 
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
-<script type="text/javascript" src="js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="js/jquery.counterup.js"></script> 
-<script type="text/javascript" src="js/waypoints.js"></script> 
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/main.js"></script>
+</footer>
+
 </body>
+
 </html>

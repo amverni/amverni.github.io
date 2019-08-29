@@ -1,108 +1,79 @@
+var originalPaddingHeight;
+var originalHomeColorOpacity = 0.7; /* Must match value in style.css #home */
 
-function main() {
+$(document).ready(function()
+{
+    originalPaddingHeight = parseFloat($('#header').css('padding-bottom'));
+    set_scrollspy_offset();
+    fade_in_elements(['.fade-in-1', '.fade-in-2']);
 
-(function () {
-   'use strict';
-   
-  	$('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 40
-            }, 900);
-            return false;
-          }
-        }
-      });
+    set_scrollspy_offset();
+    $('#navbar-btn').click(set_scrollspy_offset);
+    $('.scroll').click(function(event) { scroll_to_link(event, $($(this).attr('href')).offset().top); });
 
-	// affix the navbar after scroll below header
-$('#nav').affix({
-      offset: {
-        top: $('header').height()
-      }
-});	
+    originalPaddingHeight = parseFloat($('#header').css('padding-bottom'));
+    window.onscroll = scroll_header;
 
-	// skills chart
-	$(document).ready(function(e) {
-	//var windowBottom = $(window).height();
-	var index=0;
-	$(document).scroll(function(){
-		var top = $('#skills').height()-$(window).scrollTop();
-		console.log(top)
-		if(top<-300){
-			if(index==0){	
-			
-				$('.chart').easyPieChart({
-					easing: 'easeOutBounce',
-					onStep: function(from, to, percent) {
-						$(this.el).find('.percent').text(Math.round(percent));
-					}
-				});
-			
-				}
-			index++;
-		}
-	})
-	//console.log(nagativeValue)
-	});
-	
-	// Hide nav on click
-  $(".navbar-nav li a").click(function (event) {
-    // check if window is small enough so dropdown is created
-    var toggle = $(".navbar-toggle").is(":visible");
-    if (toggle) {
-      $(".navbar-collapse").collapse('hide');
+    position_footer();
+    window.onresize = position_footer;
+});
+
+/* Fade in different elements on the page */
+function fade_in_elements(elements)
+{
+    $(this).scrollTop(0);
+    if( elements.length )
+    {
+        $(elements[0]).animate({opacity: 1}, 500, function() {
+            fade_in_elements(elements.splice(1))
+        });
     }
-  });
 
-  	// Portfolio isotope filter
-    $(window).load(function() {
-        var $container = $('.portfolio-items');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        $('.cat a').click(function() {
-            $('.cat .active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
-
-    });
-	
-	  	
-    // CounterUp
-	$(document).ready(function( $ ) {
-		if($("span.count").length > 0){	
-			$('span.count').counterUp({
-					delay: 10, // the delay time in ms
-			time: 1500 // the speed time in ms
-			});
-		}
-	});
-	
-  	// Pretty Photo
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		social_tools: false
-	});	
-
-}());
-
-
+    scroll_header();
 }
-main();
+
+/* Shrink or Grow header and fade background image based on location on page */
+function scroll_header()
+{
+    var scrollAmount = window.pageYOffset;
+    var homeHeight = $('#header').outerHeight();
+    if( originalPaddingHeight >= scrollAmount )
+    {
+        /* Shrink header */
+        $('#header').css('padding-bottom', originalPaddingHeight - scrollAmount);
+
+        /* Fade out header background image */
+        var proportionScrolled = scrollAmount / originalPaddingHeight;
+        var opacity = originalHomeColorOpacity + (1 - originalHomeColorOpacity) * proportionScrolled;
+        $('#header').css('background', 'linear-gradient(to right, rgba(107, 77, 168, ' + String(opacity) + '),\
+                          rgba(17, 138, 188, ' + String(opacity) + ')), url(img/higgins.jpg) no-repeat center bottom')
+        $('#header').css('background-size', 'cover');
+    }
+}
+
+/* Scroll to a link on the page */
+function scroll_to_link(event, scrollLocation)
+{
+    event.preventDefault();
+    if( scrollLocation > 0 )
+    {
+        /* Shift down for navbar */
+        scrollLocation -= $(".navbar").height();
+
+        /* Shift down for shrinking header */
+        scrollLocation -= parseFloat($('#header').css('padding-bottom'));
+
+        /* round up */
+        scrollLocation += 0.5;
+    }
+    $('html, body').animate({ scrollTop: scrollLocation }, 500);
+}
+
+function position_footer()
+{
+    $('footer').removeClass('short-page-footer');
+    if( $('footer').position().top + $('footer').outerHeight() < window.innerHeight )
+    {
+        $('footer').addClass('short-page-footer');
+    }
+}
