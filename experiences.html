@@ -13,10 +13,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/experiences.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60" class="fade-in fade-in-1">
+<body class="fade-in fade-in-1">
 
 <!-- Header -->
 <div id="header" style="">
@@ -31,7 +30,7 @@
 </div>
 
 <!-- Nav Bar -->
-<nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top fade-in fade-in-1">
     <div class="container-fluid">
         <div class="navbar-header" id="header-logo">
             <a class="navbar-brand scroll" href="#header">AMV</a>
@@ -43,33 +42,29 @@
             </button>
         </div>
 
-        <div class="collapse navbar-collapse justify-content-center" id="collapsible-navbar">
-            <ul class="navbar-nav text-uppercase">
-                <li class="nav-item">
-                    <a class="nav-link external-page-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#header">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#work-expereince">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#research-expereince">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#leadership-expereince">Leadership</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link external-page-link" href="publications.html">Publications</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="collapsible-navbar">
+            <div class="navbar-nav text-uppercase">
+                <div class="nav-item dropdown">
+                    <a class="nav-link scroll" href="index.html">Home</a>
+                    <div class="dropdown-content">
+                        <a class="nav-link scroll" href="index.html#about">About</a>
+                        <a class="nav-link scroll dropdown-content-last" href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link active" href="#header">Experience</a>
+                    <div class="dropdown-content">
+                        <a class="nav-link scroll" href="#work-expereince">Work</a>
+                        <a class="nav-link scroll" href="#research-expereince">Research</a>
+                        <a class="nav-link scroll" href="#leadership-expereince">Leadership</a>
+                        <a class="nav-link scroll" href="#education">Education</a>
+                        <a class="nav-link scroll dropdown-content-last" href="#projects">Projects</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="publications.html">Publications</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -96,7 +91,7 @@
                 </div>
                 <div class="experience-description">
                     <p>
-                        During the summer of 2019, I returned to Garmin, this time in the Outdoor department, on the high-level software team responsible for the outdoor smartwatches. The focus of my internship was developing graphical representations of in-activity metrics for the next generation of outdoor and fitness smartwatches. In other words, I created data fields that included gauges, graphs, dials, etc. to represent the data available to the customer during activities. Another feature that I worked on was implementing stealth mode on the Instinct Tactical. This feature hide GPS data from external use in order to comply with military regulations while still allowing all on-device features to remain functional
+                        During the summer of 2019, I returned to Garmin, this time in the Outdoor department, on the high-level software team responsible for the outdoor smartwatches. The focus of my internship was developing graphical representations of in-activity metrics for the next generation of outdoor and fitness smartwatches. In other words, I created data fields that included gauges, graphs, dials, etc. to visually represent the data available to the customer during activities. Another feature that I worked on was implementing stealth mode on the Instinct Tactical. This feature hides GPS data from external use in order to comply with military regulations while still allowing all on-device features to remain functional.
                     </p>
                     <p>
                         Technical skills: C, Monkey C, Git, Gerrit Code Review, Jira
@@ -117,7 +112,7 @@
                 </div>
                 <div class="experience-description">
                     <p>
-                        For my first internship, I worked at Garmin International in the Automotive OEM department as a software engineer intern during the summer of 2018. I was on the navigation app UI team and I primarily worked on building developer tools to increase productivity. My first major project was to create a tool to automatically download all libraries necessary for debugging off of an automotive head unit after a software crash. This effectively eliminated a 15 minute manual step from the debugging proces. My largest project was to develop an automated testing framework to simulate interactions between Garmin's navigation app and the rest of the head unit. I also implemented multiple customer facing features such as providing screenshot previews of map locations.
+                        For my first internship I worked at Garmin International in the Automotive OEM department as a software engineer intern during the summer of 2018. I was on the navigation app UI team and I primarily worked on building developer tools to increase productivity. My first major project was to create a tool to automatically download all libraries necessary for debugging off of an automotive head unit after a software crash. This effectively eliminated a 15 minute manual step from the debugging proces. My largest project was to develop an automated testing framework to simulate interactions between Garmin's navigation app and the rest of the head unit. I also implemented multiple customer facing features such as providing screenshot previews of map locations.
                     </p>
                     <p>
                         Technical skills: C++, Python, Qt, Squish GUI testing, Git, Gerrit, Jira
@@ -155,10 +150,10 @@
                 </div>
                 <div class="experience-description">
                     <p>
-                        I am currently conducting research on hybrid intelligence systems (combining human and artificial intelligence) and human-computer interaction in the <a href="http://croma.eecs.umich.edu/croma.html">Crowds and Machines (CROMA) Lab</a> advised by <a href="http://croma.eecs.umich.edu/index.html">Dr. Walter S. Lasecki</a>. My most recent project was on the generalization of image annotation tools which led to developing image property categories and task requirement categories that are found across domains of image annotation tasks. From these categories, we developed a test harness to guide the design of image annotation tools and testbeds that wish to generalize across a range of domains. Previously, I worked on a project to improve the accuracy of a image annotation tool by adding features to the user interface. The tool was used to aggragate particle filtering to reconstruct 3D scenes from 2D images for use in training autonomous vehicles. Initial testing with expert annotators showed that our improvements led to a 30% increase in accuracy.
+                        I am currently conducting research on hybrid intelligence systems (combining human and artificial intelligence) and human-computer interaction in the <a href="http://croma.eecs.umich.edu/croma.html">Crowds and Machines (CROMA) Lab</a> advised by <a href="http://croma.eecs.umich.edu/index.html">Dr. Walter S. Lasecki</a>. My most recent project was on the generalization of image annotation tools which led to developing image property categories and task requirement categories that are found across domains of image annotation tasks. From these categories, we developed a test harness to guide the design of image annotation tools and testbeds that wish to generalize across a range of domains. Previously, I worked on a project to improve the accuracy of a image annotation tool by adding features to the user interface. The tool was used to aggragate crowd workers responses for a particle filtering task to reconstruct 3D scenes from 2D images for use in training autonomous vehicles. Initial testing with expert annotators showed that our improvements led to a 30% increase in accuracy.
                     </p>
                     <p>
-                        Technical skills: JavaScript, JQuery, HTML, CSS, PHP, LaTex
+                        Technical skills: JavaScript, JQuery, HTML, CSS, PHP, LaTex, Git
                     </p>
                 </div>
             </div>
@@ -188,7 +183,11 @@
                     <h5>Michigan Mars Rover Team - Ann Arbor, MI</h5>
                     <h5>June 2019 - present</h5>
                 </div>
-                <p class="experience-description">When I joined the <a href="https://mrover.org">Michigan Mars Rover Team (MRover)</a>, I was first beginning my career as a computer scientist. Over the past two years I have grown both technically and personally through contributing to the development of the rover's codebase. A large part of my learning came through the mentorship of more senior members on the team. As I enter the final year of my undergraduate studies, it is now my responsiblity to pass on my knowledge to the younger members. I am doing this through both providing one-on-one mentoring to students and by presenting technical material to the team. I am also tasked with providing feedback at design reviews and advising the new team leadership based on my past experiences on the team.</p>
+                <div class="experience-description">
+                    <p>
+                        When I joined the <a href="https://mrover.org">Michigan Mars Rover Team (MRover)</a>, I was first beginning my career as a computer scientist. Over the past two years I have grown both technically and personally through contributing to the development of the rover's codebase. A large part of my learning came through the mentorship of more senior members on the team. As I enter the final year of my undergraduate studies, it is now my responsiblity to pass on my knowledge to the younger members. I am doing this through both providing one-on-one mentoring to students and by presenting technical material to the team. I am also tasked with providing feedback at design reviews and advising the new team leadership based on my past experiences on the team.
+                    </p>
+                </div>
             </div>
             <div class="col-md-3 image-right experience-image-container">
                 <a href="https://mrover.org">
@@ -209,9 +208,11 @@
                     <h5>Michigan Mars Rover Team - Ann Arbor, MI</h5>
                     <h5>March 2018 - June 2019</h5>
                 </div>
-                <p class="experience-description">
-                    I was named the lead of the Autonomous Navigation subteam at the end of my first year on the <a href="https://mrover.org">Michigan Mars Rover Team (MRover)</a>. My primary responsibility was the successful design and implementation of the autonomous navigation program. This was something that I was well prepared for and feel that I excelled at. My other major responsibility and biggest challenge was managing a team of 19 other students with varying programming backgrounds. My first full semester as lead, I struggled greatly to bring out the best in my members due to a steep learning curve in our teams tools and a lack of experience on my part in properly delegating tasks. After many failures, I began learning how to better lead the team to find success through greater individual efforts. This included better time management, communication, and team culture. Through pushing my members to work outside of their comfort zones and take on larger roles and responsibilities, I improved their confidence. This increased not only the overall productivity of our team, but also allowed each member to contribute more than they believed they were capable of. As I hand over the reigns to the next lead, I hope to continue aiding our team's growth by sharing my past successes and failures.
-                </p>
+                <div class="experience-description">
+                    <p>
+                        I was named the lead of the Autonomous Navigation subteam at the end of my first year on the <a href="https://mrover.org">Michigan Mars Rover Team (MRover)</a>. My primary responsibility was the successful design and implementation of the autonomous navigation program. This was something that I was well prepared for and feel that I excelled at. My other major responsibility and biggest challenge was managing a team of 19 other students with varying programming backgrounds. My first full semester as lead, I struggled greatly to bring out the best in my members due to a steep learning curve in our teams tools and a lack of experience on my part in properly delegating tasks. After many failures, I began learning how to better lead the team to find success through greater individual efforts. This included better time management, communication, and team culture. Through pushing my members to work outside of their comfort zones and take on larger roles and responsibilities, I improved their confidence. This increased not only the overall productivity of our team, but also allowed each member to contribute more than they believed they were capable of. As I hand over the reigns to the next lead, I hope to continue aiding our team's growth by sharing my past successes and failures.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -227,9 +228,11 @@
                     <h5>Michigan Roller Hockey Club - Ann Arbor, MI</h5>
                     <h5>January 2017 - August 2018</h5>
                 </div>
-                <p class="experience-description">
-                    As the vice president of the Michigan Roller Hockey Club, I managed logistical and financial measures necessary for club functionality including communications with Michigan Club Sports, the MCRHL Conference, and various local rinks. As captian, I led practices and mentored the team's less experienced members in order to help team growth.
-                </p>
+                <div class="experience-description">
+                    <p>
+                        As the vice president of the Michigan Roller Hockey Club, I managed logistical and financial measures necessary for club functionality including communications with Michigan Club Sports, the MCRHL Conference, and various local rinks. As captian, I led practices and mentored the team's less experienced members in order to help team growth.
+                    </p>
+                </div>
             </div>
             <div class="col-md-3 image-right experience-image-container">
                 <img class="experience-image" src="img/umrhc.jpg">
@@ -268,7 +271,7 @@
                         Go Blue!
                     </p>
                     <p>
-                        Technical skills: C++, C, Python, LaTex, Scheme, Prolog, Make, Markdown, Git, GitHub, GitLab
+                        Technical skills: C++, C, Python, LaTex, Scheme, Prolog, Java, Make, Markdown, Git, GitHub, GitLab
                     </p>
                 </div>
             </div>
@@ -283,12 +286,12 @@
             <div class="col-xs-12 col-md-9 experience-text">
                 <div class="experience-info">
                     <h4 class="job-title">Engineering Study Abroad</h4>
-                    <h5>University of Navarra. Tecnun. Escuela de Ingenieros - San Sebastian, Spain</h5>
+                    <h5>Universidad de Navarra - Pamplona, Spain</h5>
                     <h5>May - June 2017</h5>
                 </div>
                 <div class="experience-description">
                     <p>
-                        During the summer of 2017, I studied abroad at the <a href="https://www.unav.edu/en/home">Universidad de Navarra</a>'s college of engineering, <a href="https://tecnun.unav.edu">Tecnun</a>. I took classes in microrobitcs and Spanish language and culture as well as visited many leading engineering companies in the area.
+                        During the summer of 2017, I studied abroad in Spain at the <a href="https://www.unav.edu/en/home">University of Navarra</a>. I spent the first half at <a href="https://tecnun.unav.edu">Tecnun</a>, the university's college of engineering in San Sebastian where I took a microrobitics course and visited many leading engineering companies in the surrounding area to learn about foreign business practices. The second half was spent at the main campus in Pamplona where I studied Spanish language and culture as well as Spain's political issues of the time.
                     </p>
                 </div>
             </div>
@@ -333,7 +336,7 @@
 
         <div class="row experience-item">
             <div class="col-xs-12 image-above experience-image-container">
-                <a href="https://amverni.github.io">
+                <a href="index.html">
                     <img class="experience-image" src="img/website_mobile.png">
                 </a>
             </div>
@@ -346,12 +349,12 @@
                         I developed this website in order to gain experience with web development (and more truthfully because I was looking for a fun project to work on while I was looking to procrastinate my graduate school applications). Find a bug? Feel free to let me know through my <a href="index.html#contact">contact form</a> or <a href="mailto:amverni@umich.edu">email</a> me!
                     </p>
                     <p>
-                        Technical skills: HTML, CSS, JavaScript, JQuery, Bootstrap, Git, Github
+                        Technical skills: HTML, CSS, JavaScript, JQuery, Bootstrap, Git, GitHub
                     </p>
                 </div>
             </div>
             <div class="col-md-3 image-right experience-image-container">
-                <a href="https://amverni.github.io">
+                <a href="index.html">
                     <img class="experience-image" src="img/website.png">
                 </a>
             </div>
@@ -372,7 +375,7 @@
                         In the winter semester of 2019, I took Conversational Artificial Intelligence for my senior design class where I built <a href="https://docs.google.com/presentation/d/1fH7zBtLAE_brbpPvGrfjnIudYgc8P53vFjYzqvAg0LI/edit?usp=sharing">My Instructional Assistant (Mia)</a> with a small team of students. Mia is a virtual assistant to tutor students in math (the current version of Mia focuses on the four basic operators). Mia's capabilities include giving concept explanations, providing example problems with solutions, providing practice problems, checking the correctness of answers, and walking students through the solutions of problems.
                     </p>
                     <p>
-                        Technical skills: Python, JavaScript, HTML, CSS, Dialogflow, Jinja
+                        Technical skills: Python, JavaScript, HTML, CSS, Dialogflow, Jinja, Git, GitHub
                     </p>
                 </div>
             </div>

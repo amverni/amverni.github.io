@@ -13,10 +13,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/publications.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60" class="fade-in fade-in-1">
+<body class="fade-in fade-in-1">
 
 <!-- Header -->
 <div id="header" style="">
@@ -31,7 +30,7 @@
 </div>
 
 <!-- Nav Bar -->
-<nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-custom navbar-dark sticky-top fade-in fade-in-1">
     <div class="container-fluid">
         <div class="navbar-header" id="header-logo">
             <a class="navbar-brand scroll" href="#header">AMV</a>
@@ -43,18 +42,29 @@
             </button>
         </div>
 
-        <div class="collapse navbar-collapse justify-content-center" id="collapsible-navbar">
-            <ul class="navbar-nav text-uppercase">
-                <li class="nav-item">
-                    <a class="nav-link external-page-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link external-page-link" href="experiences.html">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link scroll internal-page-link" href="#header">Publications</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="collapsible-navbar">
+            <div class="navbar-nav text-uppercase">
+                <div class="nav-item dropdown">
+                    <a class="nav-link scroll" href="index.html">Home</a>
+                    <div class="dropdown-content">
+                        <a class="nav-link scroll" href="index.html#about">About</a>
+                        <a class="nav-link scroll dropdown-content-last" href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link" href="experiences.html">Experience</a>
+                    <div class="dropdown-content">
+                        <a class="nav-link scroll" href="experiences.html#work-expereince">Work</a>
+                        <a class="nav-link scroll" href="experiences.html#research-expereince">Research</a>
+                        <a class="nav-link scroll" href="experiences.html#leadership-expereince">Leadership</a>
+                        <a class="nav-link scroll" href="experiences.html#education">Education</a>
+                        <a class="nav-link scroll dropdown-content-last" href="experiences.html#projects">Projects</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link active" href="#header">Publications</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
