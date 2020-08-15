@@ -43,6 +43,10 @@
     margin-left: 1.25rem;
 }
 
+p.navbar-brand {
+    margin-bottom: 0;
+}
+
 .navbar-dark .navbar-toggler {
     border-color: transparent;
     float: right;
@@ -97,7 +101,7 @@
 
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
-    margin-right: 79px;  /* counter offset from brand logo */
+        margin-right: 79px;  /* counter offset from brand logo */
     }
 }
 
@@ -123,7 +127,7 @@
 
 /* About Section */
 #about-portrait {
-    width: 360px;
+    width: 540px;
     height: auto;
     border-radius: 1rem !important;
     display: block;
@@ -248,6 +252,15 @@ footer a {
     margin: auto;
 }
 
+.experience-image-popupable {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.experience-image-popupable:hover {
+    opacity: 0.8;
+}
+
 .experience-text {
     text-align: justify;
 }
@@ -261,16 +274,24 @@ footer a {
     max-width: 225px;
 }
 
+/* desktop */
 @media (min-width: 768px) {
-    .image-above .experience-image {
+    .mobile-only {
         display: none;
     }
 }
 
+/* mobile */
 @media (max-width: 767px) {
-    .image-right .experience-image {
+    .desktop-only {
         display: none;
     }
+
+    #current-role {
+        display: none;
+    }
+
+
 }
 
 .experience-section {
@@ -333,9 +354,27 @@ hr {
 
 a {
     color: var(--primary-color);
+    transition: 0.3s;
 }
 
 a:hover {
     color: var(--secondary-color);
     text-decoration: none;
+    /*transition: 0.5s;*/
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+p.technical-skills {
+    margin-top: 1em;
+}
+
+.technical-skills {
+    text-align: left;
+}
+
+#send-message-disclaimer {
+    font-size: 0.75em;
 }

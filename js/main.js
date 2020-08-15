@@ -36,7 +36,6 @@ $(document).ready(function()
         scrollLocation -= parseFloat($('#header').css('padding-bottom'));
 
         $(this).scrollTop( scrollLocation );
-        console.log(scrollLocation);
     }
     scroll_header();
 });
@@ -93,4 +92,16 @@ function position_footer()
     {
         $('footer').addClass('short-page-footer');
     }
+}
+
+/* Popup experience image on click */
+function popup_image(img) {
+    $('#image-popup-modal').css('display', 'block');
+    $('#popup-image').attr('src', img.src);
+
+    let node = document.createElement("p");
+    let textNode = document.createTextNode(img.alt);
+    node.append(textNode);
+    $('#image-popup-caption').children("p").remove();
+    $('#image-popup-caption').append(node);
 }
