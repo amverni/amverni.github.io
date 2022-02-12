@@ -50,3 +50,10 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Resources
 https://reactrouter.com/docs/en/v6/getting-started/installation#basic-installation
 https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba
+https://www.npmjs.com/package/eslint-plugin-react
+https://typescript-eslint.io/rules/
+https://eslint.org/docs/rules/
+# TODO: add linter rules
+https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example
+# todo: add accessibility checker?
+https://www.w3docs.com/snippets/css/how-to-create-polaroid-image-with-css.html
