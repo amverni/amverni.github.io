@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b996841c.css",
+    "main.js": "/static/js/main.f1e15002.js",
+    "static/media/website.png": "/static/media/website.7e4a8611087ac2f4e237.png",
+    "static/media/table.jpg": "/static/media/table.db0f7b00643838ab4110.jpg",
+    "static/media/andrew.jpg": "/static/media/andrew.416c0724e66238e7ddfe.jpg",
+    "static/media/mrover_rover.jpg": "/static/media/mrover_rover.0323775b83e10bfb9e25.jpg",
+    "static/media/towards_universal_evaluation_of_image_annotation_interfaces_thumbnail.jpg": "/static/media/towards_universal_evaluation_of_image_annotation_interfaces_thumbnail.aa3b86dc79523fcd0e7e.jpg",
+    "static/media/mrover_navigation_simulator.png": "/static/media/mrover_navigation_simulator.ccfdf5cef34615e0681c.png",
+    "static/media/towards_universal_evaluation_of_image_annotation_interfaces.pdf": "/static/media/towards_universal_evaluation_of_image_annotation_interfaces.4b573bec502ca030846d.pdf",
+    "static/media/mrover_rover_andrew.jpg": "/static/media/mrover_rover_andrew.e4c7572d47e0b955cecb.jpg",
+    "static/media/um_seal.png": "/static/media/um_seal.6b69807bc04711a86612.png",
+    "static/media/um_wolverine2.jpg": "/static/media/um_wolverine2.8892847fc6e5752cead7.jpg",
+    "static/media/mia.png": "/static/media/mia.0765e2837d5206253a53.png",
+    "static/media/tecnun.png": "/static/media/tecnun.2e81a8a9309b9c03ed54.png",
+    "static/media/andrew_vernier_resume.pdf": "/static/media/andrew_vernier_resume.9c3de78038eb016641e5.pdf",
+    "static/media/higgins.jpg": "/static/media/higgins.b435bef2becfd1b90025.jpg",
+    "static/media/garmin_instinct_tactical.jpg": "/static/media/garmin_instinct_tactical.c3d70c93d624e4386c39.jpg",
+    "static/media/microsoft.png": "/static/media/microsoft.a97ef36196eb031c23b0.png",
+    "static/media/garmin_aoem.jpg": "/static/media/garmin_aoem.1ae87bbc7e8dcfd826f7.jpg",
+    "static/media/eecs485.png": "/static/media/eecs485.0505c874f761f7ff2b83.png",
+    "static/media/croma_lab.png": "/static/media/croma_lab.a87d5c727f648b8fd265.png",
+    "static/media/amazon.png": "/static/media/amazon.c3685f3e1e36f5213b4d.png",
+    "index.html": "/index.html",
+    "main.b996841c.css.map": "/static/css/main.b996841c.css.map",
+    "main.f1e15002.js.map": "/static/js/main.f1e15002.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b996841c.css",
+    "static/js/main.f1e15002.js"
+  ]
+}
