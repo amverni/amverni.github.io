@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var originalPaddingHeight;
 var originalHomeColorOpacity = 0.7; /* Must match value in style.css #home */
 
@@ -12,7 +13,7 @@ $(document).ready(function()
         var page, element;
         [page, element] = $(this).attr('href').split("#");
 
-        if( page == "")
+        if(page === "")
         {
             event.preventDefault();
             scroll_to_link($("#" + element).offset().top);
@@ -52,8 +53,9 @@ function fade_in_elements(elements)
 }
 
 /* Shrink or Grow header and fade background image based on location on page */
-function scroll_header()
+export function scroll_header(imgPath)
 {
+    console.log(imgPath);
     var scrollAmount = window.pageYOffset;
     if( scrollAmount > originalPaddingHeight )
     {
@@ -63,11 +65,33 @@ function scroll_header()
     $('#header').css('padding-bottom', originalPaddingHeight - scrollAmount);
 
     /* Fade out header background image */
+    // var proportionScrolled = scrollAmount / originalPaddingHeight;
+    // var opacity = originalHomeColorOpacity + (1 - originalHomeColorOpacity) * proportionScrolled;
+    // $('#header').css('background', 'linear-gradient(to right, rgba(107, 77, 168, ' + String(opacity) + '),\
+    //                    rgba(17, 138, 188, ' + String(opacity) + ')), url(' + imgPath + ') no-repeat center bottom');
+    $('#header').css('background-size', 'cover');
+}
+
+export function getPadding()
+{
+    var scrollAmount = window.pageYOffset;
+    if( scrollAmount > originalPaddingHeight )
+    {
+        scrollAmount = originalPaddingHeight;
+    }
+    return originalPaddingHeight - scrollAmount;
+}
+
+export function getOpacity()
+{
+    var scrollAmount = window.pageYOffset;
+    if( scrollAmount > originalPaddingHeight )
+    {
+        scrollAmount = originalPaddingHeight;
+    }
     var proportionScrolled = scrollAmount / originalPaddingHeight;
     var opacity = originalHomeColorOpacity + (1 - originalHomeColorOpacity) * proportionScrolled;
-    $('#header').css('background', 'linear-gradient(to right, rgba(107, 77, 168, ' + String(opacity) + '),\
-                      rgba(17, 138, 188, ' + String(opacity) + ')), url(img/higgins.jpg) no-repeat center bottom')
-    $('#header').css('background-size', 'cover');
+    return opacity;
 }
 
 /* Scroll to a link on the page */
@@ -95,7 +119,7 @@ function position_footer()
 }
 
 /* Popup experience image on click */
-function popup_image(img) {
+export function popup_image(img) {
     $('#image-popup-modal').css('display', 'block');
     $('#popup-image').attr('src', img.src);
 
