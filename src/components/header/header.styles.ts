@@ -19,33 +19,21 @@ const calcHexAlpha = (scroll: number, contentHeight: number): string => {
   return opacity.toString(16).split('.')[0];
 };
 
-// const calcHeaderHeight = (scroll: number, contentHeight: number): number => {
-//   const vh = window.innerHeight;
-//   const maxTopPadding = (vh - contentHeight) / 2;
-//   const minHeight = maxTopPadding + HEADER_PADDING + contentHeight;
-//   const height = vh - scroll;
-//   return Math.max(minHeight, height);
-// };
-
 interface HeaderStylesProps {
   scrollY: number;
   contentHeight: number;
 }
 
 export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => ({
-  headerContainer: ({ scrollY, contentHeight }): ClassNameMap => ({
+  headerContainer: {
     color: 'white',
     minHeight: 'fit-content',
-    // height: `${calcHeaderHeight(scrollY, contentHeight)}px`,
     height: '100vh',
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center'
-    // filter: `linear-gradient(to right, ${theme.palette.secondary.main}
-    // ${calcHexAlpha(scrollY, contentHeight)},
-    // ${theme.palette.primary.main}${calcHexAlpha(scrollY, contentHeight)})`
-  }),
+  },
   backgroundImage: {
     backgroundImage: `url(${higgins})`,
     backgroundPosition: 'bottom',
@@ -60,16 +48,9 @@ export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => 
     backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.main}${calcHexAlpha(scrollY, contentHeight)}, ${theme.palette.primary.main}${calcHexAlpha(scrollY, contentHeight)})`,
     width: '100%',
     height: '100%',
-    // zIndex: -1,
     zIndex: '-1',
     position: 'absolute'
   }),
-  // 'headerContainer::before': {
-  //   content: '',
-  //   backgroundImage: `url(${Higgins})`,
-  //   width: '100%',
-  //   height: '100%'
-  // },
   headerContent: ({ scrollY, contentHeight }): ClassNameMap => ({
     textAlign: 'center',
     margin: `${HEADER_PADDING}px`,
