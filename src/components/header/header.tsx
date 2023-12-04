@@ -3,14 +3,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useStyles } from './header.styles';
 
 interface HeaderProps {
-  forceMinimize: boolean;
+  isDynamic: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ forceMinimize }:HeaderProps) => {
+export const Header: React.FC<HeaderProps> = ({ isDynamic }:HeaderProps) => {
   const container = useRef<HTMLDivElement>(null);
   const headerContent = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
-  const styles = useStyles({ scrollY, contentHeight: headerContent.current?.clientHeight || 0 });
+  const styles = useStyles({
+    scrollY,
+    contentHeight: headerContent.current?.clientHeight || 0,
+    isDynamic
+  });
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -20,8 +24,12 @@ export const Header: React.FC<HeaderProps> = ({ forceMinimize }:HeaderProps) => 
 
   return (
     <div className={styles.headerContainer} ref={container}>
-      <div className={styles.backgroundImage} />
-      <div className={styles.backgroundImageFilter} />
+      {isDynamic && (
+        <>
+          <div className={styles.backgroundImage} />
+          <div className={styles.backgroundImageFilter} />
+        </>
+      )}
       <div className={styles.headerContent} ref={headerContent}>
         <TypingEffect text="Andrew M. Vernier" as="h1" className={styles.title} />
         <h2 className={styles.subtitle}>

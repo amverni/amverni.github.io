@@ -20,20 +20,22 @@ const calcHexAlpha = (scroll: number, contentHeight: number): string => {
 };
 
 interface HeaderStylesProps {
+  isDynamic: boolean;
   scrollY: number;
   contentHeight: number;
 }
 
 export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => ({
-  headerContainer: {
+  headerContainer: ({ isDynamic }): Partial<ClassNameMap> => ({
     color: 'white',
     minHeight: 'fit-content',
-    height: '100vh',
+    height: isDynamic ? '100vh' : undefined,
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center'
-  },
+    justifyContent: 'center',
+    backgroundImage: isDynamic ? undefined : `linear-gradient(to right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`
+  }),
   backgroundImage: {
     backgroundImage: `url(${higgins})`,
     backgroundPosition: 'bottom',
@@ -44,17 +46,20 @@ export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => 
     zIndex: '-2',
     position: 'absolute'
   },
-  backgroundImageFilter: ({ scrollY, contentHeight }): ClassNameMap => ({
-    backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.main}${calcHexAlpha(scrollY, contentHeight)}, ${theme.palette.primary.main}${calcHexAlpha(scrollY, contentHeight)})`,
-    width: '100%',
-    height: '100%',
-    zIndex: '-1',
-    position: 'absolute'
-  }),
-  headerContent: ({ scrollY, contentHeight }): ClassNameMap => ({
+  backgroundImageFilter: ({ scrollY, contentHeight, isDynamic }): ClassNameMap => {
+    const alpha = isDynamic ? calcHexAlpha(scrollY, contentHeight) : 'ff';
+    return {
+      backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.main}${alpha}, ${theme.palette.primary.main}${alpha})`,
+      width: '100%',
+      height: '100%',
+      zIndex: '-1',
+      position: 'absolute'
+    };
+  },
+  headerContent: ({ scrollY, contentHeight, isDynamic }): Partial<ClassNameMap> => ({
     textAlign: 'center',
     margin: `${HEADER_PADDING}px`,
-    marginTop: `${calcHeaderContentOffset(scrollY, contentHeight)}px`
+    marginTop: isDynamic ? `${calcHeaderContentOffset(scrollY, contentHeight)}px` : `${HEADER_PADDING}px`
   }),
   title: {
     ...theme.typography.h1
