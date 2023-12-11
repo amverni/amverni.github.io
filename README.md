@@ -57,3 +57,7 @@ https://eslint.org/docs/rules/
 https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example
 # todo: add accessibility checker?
 https://www.w3docs.com/snippets/css/how-to-create-polaroid-image-with-css.html
+
+## TODOS
+Make navigation accessible
+Move footer and header out of nav menu so the whole page doesn't reload
