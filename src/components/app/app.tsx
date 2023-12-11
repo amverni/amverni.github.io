@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import { NavMenu } from 'components/navMenu/navMenu';
+import { NavBar } from 'components/navMenu/navBar';
 import { Header } from 'components/header/header';
 import { About } from '../about';
 import { Experiences } from '../experiences';
@@ -18,7 +18,7 @@ export const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <RootErrorBoundary>
         <Header isDynamic={location.pathname === '/'} />
-        <NavMenu />
+        <NavBar />
         <div className={styles.main}>
           <Routes>
             <Route path="" element={<About />} />

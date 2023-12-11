@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useStyles } from './navMenu.styles';
+import { useStyles } from './navBar.styles';
 
 type RouteInfo = {
   path: string;
@@ -26,7 +26,7 @@ const ROUTES: RouteInfo[] = [
   }
 ];
 
-export const NavMenu: React.FC = () => {
+export const NavBar: React.FC = () => {
   // const location = useLocation();
   const styles = useStyles();
 

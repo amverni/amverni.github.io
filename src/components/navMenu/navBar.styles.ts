@@ -11,6 +11,7 @@ export const useStyles = makeStyles<typeof Theme>((theme) => ({
   navLink: {
     color: 'white',
     textDecoration: 'none',
+    transition: 'color 0.2s ease-in-out',
     '&.active': {
       color: theme.palette.primary.light,
       cursor: 'default'
