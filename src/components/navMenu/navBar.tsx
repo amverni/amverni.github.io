@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useStyles } from './navBar.styles';
 
 type RouteInfo = {
@@ -27,7 +27,6 @@ const ROUTES: RouteInfo[] = [
 ];
 
 export const NavBar: React.FC = () => {
-  // const location = useLocation();
   const styles = useStyles();
 
   const navLinks = ROUTES.map((route) => (

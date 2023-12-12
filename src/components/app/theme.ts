@@ -9,17 +9,24 @@ export default createTheme({
   },
   typography: {
     h1: {
-      fontSize: '5rem',
+      fontSize: '80px',
       fontWeight: 400,
       margin: 0
     },
     h2: {
-      fontSize: '3rem'
+      fontSize: '48px'
     },
     h3: {
-      fontSize: '2rem',
+      fontSize: '32px',
       fontWeight: 300,
       margin: 0
+    },
+    h4: {
+      fontSize: '24px'
+    },
+    h5: {
+      fontSize: '20px',
+      fontWeight: 200
     }
   }
 });

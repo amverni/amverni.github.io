@@ -6,9 +6,14 @@ export const useStyles = makeStyles<typeof Theme>((theme) => ({
     display: 'flex',
     gap: '20px',
     backgroundColor: 'black',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    height: '60px',
+    alignItems: 'center',
+    position: 'sticky',
+    top: 0
   },
   navLink: {
+    ...theme.typography.h5,
     color: 'white',
     textDecoration: 'none',
     transition: 'color 0.2s ease-in-out',
