@@ -61,3 +61,4 @@ https://www.w3docs.com/snippets/css/how-to-create-polaroid-image-with-css.html
 ## TODOS
 Make navigation accessible
 Move footer and header out of nav menu so the whole page doesn't reload
+Update favicon

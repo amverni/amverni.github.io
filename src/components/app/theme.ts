@@ -1,11 +1,13 @@
 import { createTheme } from '@mui/material/styles';
 import { blue, deepPurple } from '@mui/material/colors';
 
-export default createTheme({
+export const appTheme = createTheme({
   palette: {
     primary: blue,
-    secondary: deepPurple
-    // text:
+    secondary: deepPurple,
+    common: {
+      white: '#fff'
+    }
   },
   typography: {
     h1: {
@@ -14,7 +16,9 @@ export default createTheme({
       margin: 0
     },
     h2: {
-      fontSize: '48px'
+      fontSize: '40px',
+      fontWeight: 400,
+      margin: 0
     },
     h3: {
       fontSize: '32px',
@@ -22,11 +26,51 @@ export default createTheme({
       margin: 0
     },
     h4: {
-      fontSize: '24px'
+      fontSize: '24px',
+      fontWeight: 200
     },
     h5: {
       fontSize: '20px',
       fontWeight: 200
+    },
+    body1: {
+      fontSize: '20px',
+      textAlign: 'justify',
+      margin: 0
+    }
+  },
+  transitions: {
+    easing: {
+      easeInOut: 'ease-in-out'
+    }
+  },
+  components: {
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'contained' },
+          style: ({ theme }) => ({
+            ...theme.typography.body1,
+            textTransform: 'unset',
+            borderRadius: '1000px',
+            maxWidth: 'fit-content',
+            transition: theme.transitions.create(['background-color', 'box-shadow']),
+            '&:hover': {
+              // backgroundColor: theme.palette.secondary.main
+            }
+          })
+        }
+      ]
+      // styleOverrides: {
+      //   root: ({ theme }) => ({
+      //     backgroundColor: theme.palette.primary.main,
+      //     '&:hover': {
+      //       backgroundColor: theme.palette.secondary.main
+      //     }
+      //   })
+      // }
     }
   }
 });
+
+export type AppTheme = typeof appTheme;

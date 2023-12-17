@@ -30,7 +30,7 @@ export const NavBar: React.FC = () => {
   const styles = useStyles();
 
   const navLinks = ROUTES.map((route) => (
-    <NavLink to={route.path} className={styles.navLink}>{route.title}</NavLink>
+    <NavLink to={route.path} className={styles.navLink} key={route.path}>{route.title}</NavLink>
   ));
   return (
     <nav className={styles.navContainer}>

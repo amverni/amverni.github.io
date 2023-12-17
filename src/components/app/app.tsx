@@ -3,19 +3,19 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { NavBar } from 'components/navMenu/navBar';
 import { Header } from 'components/header/header';
-import { About } from '../about';
-import { Experiences } from '../experiences';
-import RootErrorBoundary from '../RootErrorBoundary';
+import { About } from 'components/about/about';
+import { Experiences } from 'components/experiences';
+import RootErrorBoundary from 'components/RootErrorBoundary';
 import { Footer } from '../footer/footer';
 import useStyles from './app.styles';
-import theme from './theme';
+import { appTheme } from './theme';
 
 export const App: React.FC = () => {
   const location = useLocation();
   const styles = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={appTheme}>
       <RootErrorBoundary>
         <Header isDynamic={location.pathname === '/'} />
         <NavBar />

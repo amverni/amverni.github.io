@@ -1,5 +1,5 @@
-import { ClassNameMap, makeStyles } from '@mui/styles';
-import Theme from 'components/app/theme';
+import { makeStyles } from '@mui/styles';
+import { type AppTheme } from 'components/app/theme';
 import higgins from 'assets/img/higgins.jpg';
 import { convertPercentToVal } from 'utils/convertPercentToVal';
 
@@ -25,9 +25,9 @@ interface HeaderStylesProps {
   contentHeight: number;
 }
 
-export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => ({
-  headerContainer: ({ isDynamic }): Partial<ClassNameMap> => ({
-    color: 'white',
+export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
+  headerContainer: ({ isDynamic }) => ({
+    color: theme.palette.common.white,
     minHeight: 'fit-content',
     height: isDynamic ? '100vh' : undefined,
     boxSizing: 'border-box',
@@ -46,7 +46,7 @@ export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => 
     zIndex: '-2',
     position: 'absolute'
   },
-  backgroundImageFilter: ({ scrollY, contentHeight, isDynamic }): ClassNameMap => {
+  backgroundImageFilter: ({ scrollY, contentHeight, isDynamic }) => {
     const alpha = isDynamic ? calcHexAlpha(scrollY, contentHeight) : 'ff';
     return {
       backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.main}${alpha}, ${theme.palette.primary.main}${alpha})`,
@@ -56,7 +56,7 @@ export const useStyles = makeStyles<typeof Theme, HeaderStylesProps>((theme) => 
       position: 'absolute'
     };
   },
-  headerContent: ({ scrollY, contentHeight, isDynamic }): Partial<ClassNameMap> => ({
+  headerContent: ({ scrollY, contentHeight, isDynamic }) => ({
     textAlign: 'center',
     margin: `${HEADER_PADDING}px`,
     marginTop: isDynamic ? `${calcHeaderContentOffset(scrollY, contentHeight)}px` : `${HEADER_PADDING}px`

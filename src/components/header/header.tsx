@@ -32,9 +32,9 @@ export const Header: React.FC<HeaderProps> = ({ isDynamic }:HeaderProps) => {
       )}
       <div className={styles.headerContent} ref={headerContent}>
         <TypingEffect text="Andrew M. Vernier" as="h1" className={styles.title} />
-        <h2 className={styles.subtitle}>
+        <h3 className={styles.subtitle}>
           Sports Enthusiast | Adventurer | Software Engineer
-        </h2>
+        </h3>
       </div>
     </div>
   );

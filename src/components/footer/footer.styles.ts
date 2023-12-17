@@ -1,7 +1,7 @@
-import Theme from 'components/app/theme';
+import type { AppTheme } from 'components/app/theme';
 import { makeStyles } from '@mui/styles';
 
-export const useStyles = makeStyles<typeof Theme>((theme) => ({
+export const useStyles = makeStyles<AppTheme>((theme) => ({
   footerContainer: {
     background: `linear-gradient(to right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
     height: '48px',
@@ -11,7 +11,7 @@ export const useStyles = makeStyles<typeof Theme>((theme) => ({
   footerContent: {
     display: 'flex',
     gap: '20px',
-    color: 'white',
+    color: theme.palette.common.white,
     fontSize: '14px',
     margin: 0,
     justifyContent: 'center',
@@ -27,13 +27,13 @@ export const useStyles = makeStyles<typeof Theme>((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
 
-    transition: 'font-size 0.2s ease-in-out',
+    transition: theme.transitions.create('font-size', { duration: theme.transitions.duration.shortest }),
     fontSize: '16px',
     '&:hover': {
       fontSize: '20px'
     }
   },
   emailIcon: {
-    color: 'white'
+    color: theme.palette.common.white
   }
 }));

@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
-import Theme from 'components/app/theme';
+import { type AppTheme } from 'components/app/theme';
 
-export const useStyles = makeStyles<typeof Theme>((theme) => ({
+export const useStyles = makeStyles<AppTheme>((theme) => ({
   navContainer: {
     display: 'flex',
     gap: '20px',
@@ -13,10 +13,10 @@ export const useStyles = makeStyles<typeof Theme>((theme) => ({
     top: 0
   },
   navLink: {
-    ...theme.typography.h5,
-    color: 'white',
+    ...theme.typography.h4,
+    color: theme.palette.common.white,
     textDecoration: 'none',
-    transition: 'color 0.2s ease-in-out',
+    transition: theme.transitions.create('color', { duration: theme.transitions.duration.shorter }),
     '&.active': {
       color: theme.palette.primary.light,
       cursor: 'default'
