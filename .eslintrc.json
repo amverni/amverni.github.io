@@ -20,21 +20,6 @@
     "plugins": ["react", "@typescript-eslint", "react-hooks"],
     "rules": {
         "import/prefer-default-export": "off",
-        // "react/jsx-filename-extension": [
-        //     "warn",
-        //     {
-        //         "extensions": [".tsx"]
-        //     }
-        // ],
-        // "@typescript-eslint/no-shadow": ["error"],
-        // "@typescript-eslint/explicit-function-return-type": [
-            //     "error",
-            //     {
-                //         "allowExpressions": true
-                //     }
-                // ],
-                // "react-hooks/rules-of-hooks": "error",
-                // "react-hooks/exhaustive-deps": "warn",
         "comma-dangle": ["error", "never"],
         "import/extensions": [
             "error",
@@ -48,12 +33,13 @@
         // "max-len": [
         //     "error",
         //     {
-        //         "code": 120
+        //         "code": 100
         //     }
         // ],
         "no-mixed-operators": ["error", {
             "allowSamePrecedence": true
         }],
+        "no-nested-ternary": "off",
         "no-use-before-define": "off",
         "no-tabs": ["error"],
         "react/function-component-definition": ["error", {

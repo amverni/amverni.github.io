@@ -7,7 +7,7 @@ import { About } from 'components/about/about';
 import { Experiences } from 'components/experiences';
 import RootErrorBoundary from 'components/RootErrorBoundary';
 import { Footer } from '../footer/footer';
-import useStyles from './app.styles';
+import { useStyles } from './app.styles';
 import { appTheme } from './theme';
 
 export const App: React.FC = () => {

@@ -6,7 +6,8 @@ export const appTheme = createTheme({
     primary: blue,
     secondary: deepPurple,
     common: {
-      white: '#fff'
+      white: '#fff',
+      black: '#000'
     }
   },
   typography: {
@@ -54,21 +55,13 @@ export const appTheme = createTheme({
             textTransform: 'unset',
             borderRadius: '1000px',
             maxWidth: 'fit-content',
-            transition: theme.transitions.create(['background-color', 'box-shadow']),
-            '&:hover': {
-              // backgroundColor: theme.palette.secondary.main
-            }
+            transition: theme.transitions.create(['background-color', 'box-shadow'])
+            // '&:hover': {
+            // backgroundColor: theme.palette.secondary.main
+            // }
           })
         }
       ]
-      // styleOverrides: {
-      //   root: ({ theme }) => ({
-      //     backgroundColor: theme.palette.primary.main,
-      //     '&:hover': {
-      //       backgroundColor: theme.palette.secondary.main
-      //     }
-      //   })
-      // }
     }
   }
 });

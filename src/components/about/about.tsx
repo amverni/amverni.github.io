@@ -2,13 +2,16 @@ import { SectionsContainer } from 'components/shared/section/sectionsContainer';
 import * as React from 'react';
 import { Section } from 'components/shared/section/section';
 import andrew from 'assets/img/andrew.jpg';
-import aboutInfo from 'assets/data/aboutInfo.json';
+import { aboutInfo } from 'assets/data/aboutInfo';
 import { Button } from 'components/shared/button/button';
 import Resume from 'assets/files/andrew_vernier_resume.pdf';
 import { useStyles } from './about.styles';
+import { ContactForm } from './contactForm/contactForm';
+import { SocialMedias } from './socialMedia/socialMedias';
 
 export const About: React.FC = () => {
   const styles = useStyles();
+
   return (
     <SectionsContainer>
       <Section title="About">
@@ -23,7 +26,8 @@ export const About: React.FC = () => {
         </div>
       </Section>
       <Section title="Contact">
-        <div>Contact Me!</div>
+        <ContactForm />
+        <SocialMedias />
       </Section>
     </SectionsContainer>
   );
