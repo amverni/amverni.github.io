@@ -36,12 +36,14 @@
         //         "code": 100
         //     }
         // ],
+        "linebreak-style": ["warn", "unix"],
         "no-mixed-operators": ["error", {
             "allowSamePrecedence": true
         }],
         "no-nested-ternary": "off",
         "no-use-before-define": "off",
         "no-tabs": ["error"],
+        "operator-linebreak": "off",
         "react/function-component-definition": ["error", {
             "namedComponents": "arrow-function"
         }],
@@ -54,6 +56,8 @@
             }
         ],
         "react/jsx-props-no-spreading": "off",
+        /* Much of the website is static so using the indexes is preferred. */
+        "react/no-array-index-key": "warn",
         "react/require-default-props": "off",
         "react/state-in-constructor": ["error", "never"],
         "semi": ["error"],

@@ -28,14 +28,21 @@ export const appTheme = createTheme({
     },
     h4: {
       fontSize: '24px',
-      fontWeight: 200
+      fontWeight: 200,
+      margin: 0
     },
     h5: {
       fontSize: '20px',
-      fontWeight: 200
+      fontWeight: 200,
+      margin: 0
     },
     body1: {
       fontSize: '20px',
+      textAlign: 'justify',
+      margin: 0
+    },
+    body2: {
+      fontSize: '16px',
       textAlign: 'justify',
       margin: 0
     }

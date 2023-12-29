@@ -63,3 +63,4 @@ Make navigation accessible
 Move footer and header out of nav menu so the whole page doesn't reload
 Update favicon
 Better validation on contact form
+Update experiences descriptions (particularly the Microsoft ones) and clean up the technologies sections
