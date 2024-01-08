@@ -2,6 +2,7 @@ import React from 'react';
 import { experiences as experiencesData } from 'assets/data/experiences';
 import { Section } from 'components/shared/section/section';
 import { stringifyTimeRange } from 'utils/stringifyTimeRange';
+import { UnderConstruction } from 'components/shared/underConstruction/underConstruction';
 import { useStyles } from './experiences.styles';
 import type {
   CompanyInfo,
@@ -164,6 +165,7 @@ export const Experiences: React.FC = () => {
 
   return (
     <>
+      <UnderConstruction itemName="Experiences Page" />
       <Section title="Work">
         {workExperiences}
       </Section>
