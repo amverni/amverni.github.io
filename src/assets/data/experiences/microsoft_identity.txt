@@ -1,3 +1,9 @@
-Hello world
-
-Display more text
+I currently work on the Azure Privileged Identity Management team where I help keep millions of users' 
+identities secure in their day-to-day work.
+I am mainly focused on front-end web development which allows me to pursue my passion for creating impactful user interfaces.
+I am also exploring how our team can migrate from KnockoutJS to React within the constraints of internal frameworks 
+in order to have a more performant and maintainable service.
+I recently redesigned our team's end to end UI test project to increase reliability and maintainability through
+statelessness and object-oriented paradigms such as abstraction, encapsulation, and polymorphism.
+Additionally, I am improving our onboarding process by developing more robust documentation, a concrete on-call 
+training guide, and serving as an onboarding buddy and mentor for our newest engineers.

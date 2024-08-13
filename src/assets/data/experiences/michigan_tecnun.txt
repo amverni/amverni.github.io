@@ -1,0 +1,9 @@
+During the summer of 2017, I studied abroad in Spain at the [University of Navarra](https://www.unav.edu/en/home).
+I spent the first half at [Tecnun](https://tecnun.unav.edu/), the university's college of engineering in 
+San Sebastian where I visited many leading engineering companies in the surrounding area to learn about 
+foreign business practices. 
+I also took a microrobitics course where I worked with a small group of both Michigan and Tecnun students 
+to program an arduino based robot to autonomously navigate out of a maze. 
+The second half was spent at the University of Navarra's main campus in Pamplona where I studied Spanish 
+language and culture as well as Spain's political issues of the time such as the Catalan independence 
+movement and the introduction of ride-hailing services.

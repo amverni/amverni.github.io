@@ -23,9 +23,9 @@ export type WorkExperienceInfo = Required<Omit<ExperienceInfo, 'note'>>;
 
 export type ResearchExperienceInfo = Required<Omit<ExperienceInfo, 'note'>>;
 
-export type LeadershipExperienceInfo = Required<Omit<ExperienceInfo, 'note'>>;
+export type LeadershipExperienceInfo = Required<Omit<ExperienceInfo, 'note' | 'skills'>>;
 
-export type EducationExperienceInfo = Required<Omit<ExperienceInfo, 'note'>>;
+export type EducationExperienceInfo = Required<Omit<ExperienceInfo, 'note'>> & ExperienceInfo;
 
 export type ProjectExperienceInfo = ExperienceInfo;
 

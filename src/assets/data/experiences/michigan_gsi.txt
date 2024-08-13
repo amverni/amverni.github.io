@@ -1,0 +1,8 @@
+I worked on the staff for EECS 485 - Web Systems as a Graduate Student Instructor (GSI) where I 
+taught students introductory web development concepts such as server and client-side dynamic pages, 
+web security, and MapReduce.
+A new focus for us was adding how to use cloud computing technologies such as AWS for scaling up 
+web applications which we taught through hands on labs.
+On top of the normal responsiblities of being a GSI such as office hours and helping students with 
+class concepts, I was responsible for coordinating logistics for the exams and quizzes which was of particular 
+importance as we temporarily moved to a completely remote offering of the course.

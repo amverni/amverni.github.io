@@ -1,0 +1,33 @@
+I was named the lead of the Autonomous Navigation subteam for my second season on the 
+[Michigan Mars Rover Team (MRover)](https://mrover.org/). 
+My primary responsibility was the successful design and implementation of the autonomous navigation system. 
+I had to ensure that we were meeting all of our design requirements set by our systems engineering team and 
+that the implementation of those designs would be completed within our allocated budget and met all of the 
+critical deadlines set by our executive board. All of these things were tasks I was capable of performing for myself, 
+however I was no longer just taking care of myself. 
+I was now managing a team of 17 undergraduate students with varying programming backgrounds that I had to plan for 
+and delegate work to Initially I thought that I was going to be able to excel in this role because I was an expert 
+in the subject matter for our subteam. This was far from true. 
+My first semester as lead, I struggled greatly to bring out the best in my members due to a steep learning curve in 
+our teams tools, a lack of experience on my part in properly delegating tasks, and wavering commitment from some members. 
+Our team’s progress was minimal and I was running out of ideas on how to change that. 
+Two months into the season I reached out to one of the seniors on our team for his advice. 
+After a lot of discussion we realized that members were treating my meetings like they were a class lecture. 
+We concluded that I was likely hurting the team by trying to provide so much help. 
+By slowing down and focusing on group efforts to try to make sure everyone could contribute, I wasn’t allowing 
+some members to reach their full potential. At this point I switched to forcing more independence by members. 
+Through pushing my members to work outside of their comfort zones and take on larger roles and responsibilities, 
+I improved their confidence. This increased not only the overall productivity of our team, but also allowed 
+each member to contribute more than they believed they were capable of.
+
+As one of the leads most heavily involved in the preparation for the autonomy task at competition, 
+I was placed in charge of making decision during that 40 minute timed task. 
+I was in charge of planning our strategy and making high pressure decisions that highly impacted our team’s performance. 
+Ultimately, our team placed third in the autonomy task and produced our best score in team history. 
+Throughout the competition I attempted to convince my entire team that we were going to get a perfect score. 
+Many of my teammates begrudgingly followed my lead but never truly believed it. 
+Despite missing this goal I had set for us, by the end of competition I had proven to my team that we were competing 
+for the top spot in the autonomy task. Further, I instilled the belief in them that our system is perennial contender 
+to win the University Rover Challenge - a feat no one thought we could achieve days earlier.
+
+More details about my technical contributions to MRover can be found in the Michigan Mars Rover Team section.

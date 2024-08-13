@@ -17,6 +17,7 @@ export const Experience: React.FC<ExperienceProps> = ({
     title,
     entity: entityData,
     timeline,
+    note: noteData,
     descriptionFilename,
     skills,
     image: imageData
@@ -51,6 +52,10 @@ export const Experience: React.FC<ExperienceProps> = ({
 
   const timerange = timeline && (
     <p className={styles.subtitle}>{stringifyDateRange(timeline.startDate, timeline.endDate)}</p>
+  );
+
+  const note = noteData && (
+    <p className={styles.subtitle}>{noteData}</p>
   );
 
   const description = (
@@ -110,6 +115,7 @@ export const Experience: React.FC<ExperienceProps> = ({
         {header}
         {entity}
         {timerange}
+        {note}
         {description}
         {technicalSkills}
       </div>

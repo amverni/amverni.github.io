@@ -1,0 +1,70 @@
+I conducted research on hybrid intelligence systems (combining human and artificial intelligence) 
+and human-computer interaction in the [Crowds and Machines (CROMA) Lab](http://croma.eecs.umich.edu/croma.html) 
+advised by [Dr. Walter S. Lasecki](http://croma.eecs.umich.edu/index.html).
+
+My most recent project was using machine learning for conversation disentanglement which is the separation of 
+distinct conversations that have occurred in the same thread over the same period of time.
+[Previous work](https://www.aclweb.org/anthology/P19-1374/) had already proven this to be possible with high 
+accuracy however it took 255 hours of human effort to annotate the dataset and the evaluation was done on 
+conversation within the same domain as the training data. 
+Our goal was to learn if it was possible to obtain a similar accuracy in new domains with minimal human effort. 
+We proposed using transfer learning to leverage the original dataset and then training the model on a small set 
+of data in the new domain. We aimed to require users to spend on the order of one hour or less annotating data 
+in a new domain in order to achieve high accuracy conversation disentanglement in that new domain. 
+In order to so, we theorized that choosing the right data to annotate was critical (e.g. a single untangled 
+conversation will likely not be as informative as a heavily entangled conversation). 
+While it made sense that training on more entangled data was likely better, there was a number of problems 
+with proving this that I solved.
+
+First, I had to collect data large amounts of data about IRC channels. 
+The primary reason for identifying channels in new domains and collecting logs from these channels. 
+I also used this data to characterize the IRC space. 
+For example I determined the proportion of channels that had logs (even if they weren't accessible) as we 
+felt that if channel admins cared enough to keep around logs, disentangling those logs would be of interest to them. 
+This was one way we motivated our research.
+
+Second, there existed no metric for comparing the level of entanglement of threads. 
+Thus, I conceptualized two metrics to do this - the average number of conversations at a time instant in a 
+thread and the link intersection ratio of a thread. 
+If we annotate a conversation, we create "links" from a message to the message that it is in response to. 
+A link intersection occurs whenever two links span messages in the same time range (thus indicating that 
+two conversations were occuring at overlapping times). 
+While these metrics matched our intuition for what constitutes and more entangled conversation, I still 
+had to prove their effectiveness. 
+Thus, I used the strong correlation between these metrics and other metrics that we would expect to be 
+affected by the entanglement of a thread (e.g. number of messages per minute, number of username references 
+in messages, etc.) to motivate the usefullness of my custom metrics.
+
+Lastly, now that I had these metrics, I was able to tackle our next problem which was proving that we 
+could use them to determine which portions of conversations users should annotate and later train the 
+model on to most effectively increase the accuracy of the model in the new domain. 
+There were a number of elements to this. 
+One was showing a strong correlation between the calculated entanglement of a thread with the original 
+model (only transfer learning) and the trained model (transfer learning plus training in the new domain) 
+because it would be counterproductive to annotate all the data to find the most entangled data to annotate 
+only that data. 
+Another important aspect was running experiments to determine the effectiveness of training on different 
+amounts of data and various levels of entangled data. 
+We will use these results to guide our suggestion for choosing data to annotate for new users in new domains.
+
+Previously I also did research in the space of image annotation tools where I worked on two main projects. 
+First, I worked on an image annotation tool that aggragated crowd worker's responses for a particle filtering 
+task to reconstruct 3D scenes from 2D images particularly geared towards images of vehicles. 
+This would allow us to train autonomous vehicles using already existing videos from the perspective of a 
+car driving on the road rather than needing to go collect that data manually. 
+This is particularly interesting because we can use videos of accidents (or "close calls") to train autonomous 
+vehicles rather putting cars into this situation purposefully in order to collect that data. 
+My work on this project primarily involved making improvements to the UI so that it was easier to use for our 
+target audience - crowd workers. 
+Initial testing with expert annotators showed that our improvements led to a 30% increase in accuracy.
+
+The second project focused on the generalization of image annotation tools. 
+We decided to look into what made image annotation tasks difficult and we found that there were two 
+main types of challenges: challenges caused by the properties of the image (e.g. low color contrast) 
+being annotated and challenges caused by the goal of the annotation task (e.g. boundary identification). 
+This led to us developing the concepts of image property categories and task requirement categories that 
+are found across domains of image annotation tasks. 
+From these categories, we developed a test harness which should guide the design of image annotation tools 
+and testbeds that wish to generalize across a range of domains. 
+This work was published and presented at UIST 2019 and the abstract can be found 
+[here](https://amverni.github.io/assets/files/towards_universal_evaluation_of_image_annotation_interfaces.pdf).
