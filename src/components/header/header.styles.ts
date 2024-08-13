@@ -16,7 +16,7 @@ const calcHexAlpha = (scroll: number, contentHeight: number): string => {
   const maxPadding = (window.innerHeight - contentHeight);
   const percentScroll = Math.min(scroll / (maxPadding - HEADER_PADDING), 1);
   const opacity = convertPercentToVal(percentScroll, MAX_OPACITY * 0xff, MIN_OPACITY * 0xff);
-  return opacity.toString(16).split('.')[0];
+  return opacity.toString(16).split('.')[0].padStart(2, '0');
 };
 
 interface HeaderStylesProps {
