@@ -40,8 +40,9 @@
             "allowSamePrecedence": true
         }],
         "no-nested-ternary": "off",
-        "no-use-before-define": "off",
+        "no-plusplus": "off",
         "no-tabs": ["error"],
+        "no-use-before-define": "off",
         "react/function-component-definition": ["error", {
             "namedComponents": "arrow-function"
         }],

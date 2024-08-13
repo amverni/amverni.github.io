@@ -13,7 +13,8 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     top: 0
   },
   navLink: {
-    ...theme.typography.h4,
+    fontSize: '24px',
+    fontWeight: 200,
     color: theme.palette.common.white,
     textDecoration: 'none',
     transition: theme.transitions.create('color', { duration: theme.transitions.duration.shorter }),

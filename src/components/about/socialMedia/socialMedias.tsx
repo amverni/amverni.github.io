@@ -7,7 +7,7 @@ export const SocialMedias: React.FC = () => {
   const styles = useStyles();
 
   const socialMediaBubbles = socialMediaData.map((socialMediaInfo) => (
-    <SocialMediaBubble {...socialMediaInfo} />
+    <SocialMediaBubble {...socialMediaInfo} key={socialMediaInfo.link} />
   ));
 
   return (

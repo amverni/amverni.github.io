@@ -1,11 +1,11 @@
 import { makeStyles } from '@mui/styles';
 import { type AppTheme } from 'components/app/theme';
-import higgins from 'assets/img/higgins.jpg';
+import colchuckImage from 'assets/img/colchuck.jpg';
 import { convertPercentToVal } from 'utils/convertPercentToVal';
 
 const HEADER_PADDING = 50;
 const MAX_OPACITY = 1;
-const MIN_OPACITY = 0.5;
+const MIN_OPACITY = 0;
 
 const calcHeaderContentOffset = (scroll: number, contentHeight: number): number => {
   const maxPadding = window.innerHeight - contentHeight - HEADER_PADDING;
@@ -37,7 +37,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
     backgroundImage: isDynamic ? undefined : `linear-gradient(to right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`
   }),
   backgroundImage: {
-    backgroundImage: `url(${higgins})`,
+    backgroundImage: `url(${colchuckImage})`,
     backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -65,6 +65,6 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
     ...theme.typography.h1
   },
   subtitle: {
-    ...theme.typography.h3
+    ...theme.typography.subtitle1
   }
 }));

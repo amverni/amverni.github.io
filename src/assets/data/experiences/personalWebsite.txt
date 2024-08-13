@@ -1,0 +1,4 @@
+I developed this website in order to gain experience with web development (and more truthfully 
+because I was looking for a fun project to work on while procrastinate grad school applications). 
+I'm currently working to refactor this website into React. 
+Find a bug? Feel free to let me know through my contact form or email me!

@@ -11,15 +11,11 @@ export const SocialMediaBubble: React.FC<SocialMediaBubbleProps> = ({ color, ico
 
   return (
     <div className={styles.bubbleContainer}>
-      <Link className={styles.bubble} href={link} onMouseOver={() => { console.log('hovering on ', link); }}>
+      <Link className={styles.bubble} href={link}>
         <FontAwesomeIcon
           icon={icon}
           inverse
-          // size="xl"
           className={styles.logo}
-        // fixedWidth
-        // height={50}
-        // width={50}
         />
       </Link>
     </div>

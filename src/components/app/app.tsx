@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { NavBar } from 'components/navMenu/navBar';
 import { Header } from 'components/header/header';
 import { About } from 'components/about/about';
-import { Experiences } from 'components/experiences';
+import { Experiences } from 'components/experiences/experiences';
 import RootErrorBoundary from 'components/RootErrorBoundary';
 import { Footer } from '../footer/footer';
 import { useStyles } from './app.styles';
