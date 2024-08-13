@@ -19,7 +19,7 @@ export const Experiences: React.FC = () => {
     <Experience
       experienceInfo={experienceInfo}
       imageLocation={numExperiences++ % 2 ? 'left' : 'right'}
-      key={experienceInfo.title}
+      key={`${experienceInfo.title} ${experienceInfo.entity?.org ?? ''}`}
     />
   );
 

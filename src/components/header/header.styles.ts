@@ -38,7 +38,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
   }),
   backgroundImage: {
     backgroundImage: `url(${colchuckImage})`,
-    backgroundPosition: 'bottom',
+    backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     width: '100%',
