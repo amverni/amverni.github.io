@@ -6,6 +6,8 @@ import { Header } from 'components/header/header';
 import { About } from 'components/about/about';
 import { Experiences } from 'components/experiences/experiences';
 import RootErrorBoundary from 'components/RootErrorBoundary';
+import { Projects } from 'components/projects/projects';
+import { Publications } from 'components/publications/publications';
 import { Footer } from '../footer/footer';
 import { useStyles } from './app.styles';
 import { appTheme } from './theme';
@@ -17,17 +19,19 @@ export const App: React.FC = () => {
   return (
     <ThemeProvider theme={appTheme}>
       <RootErrorBoundary>
-        <Header isDynamic={location.pathname === '/'} />
-        <NavBar />
-        <div className={styles.main}>
-          <Routes>
-            <Route path="" element={<About />} />
-            <Route path="experiences" element={<Experiences />} />
-            <Route path="projects" />
-            <Route path="publications" />
-          </Routes>
+        <div className={styles.appContainer}>
+          <Header isDynamic={location.pathname === '/'} />
+          <NavBar />
+          <div className={styles.main}>
+            <Routes>
+              <Route path="" element={<About />} />
+              <Route path="experiences" element={<Experiences />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="publications" element={<Publications />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </RootErrorBoundary>
     </ThemeProvider>
   );
