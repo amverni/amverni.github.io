@@ -7,14 +7,19 @@ const HEADER_PADDING = 50;
 const MAX_OPACITY = 1;
 const MIN_OPACITY = 0;
 
-const calcHeaderContentOffset = (scroll: number, contentHeight: number): number => {
-  const maxPadding = window.innerHeight - contentHeight - HEADER_PADDING;
-  return Math.min(maxPadding, (scroll + HEADER_PADDING));
+const calcMaxExtraTopMargin = (contentHeight: number): number => {
+  const headerContentWithObservedPadding = contentHeight + (2 * HEADER_PADDING);
+  return window.innerHeight - headerContentWithObservedPadding;
+};
+
+const calcHeaderContentTopMargin = (scroll: number, contentHeight: number): number => {
+  const maxExtraTopPadding = calcMaxExtraTopMargin(contentHeight);
+  return Math.min(maxExtraTopPadding, scroll) + HEADER_PADDING;
 };
 
 const calcHexAlpha = (scroll: number, contentHeight: number): string => {
-  const maxPadding = (window.innerHeight - contentHeight);
-  const percentScroll = Math.min(scroll / (maxPadding - HEADER_PADDING), 1);
+  const maxExtraTopPadding = calcMaxExtraTopMargin(contentHeight);
+  const percentScroll = Math.min(scroll / maxExtraTopPadding, 1);
   const opacity = convertPercentToVal(percentScroll, MAX_OPACITY * 0xff, MIN_OPACITY * 0xff);
   return opacity.toString(16).split('.')[0].padStart(2, '0');
 };
@@ -59,7 +64,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
   headerContent: ({ scrollY, contentHeight, isDynamic }) => ({
     textAlign: 'center',
     margin: `${HEADER_PADDING}px`,
-    marginTop: isDynamic ? `${calcHeaderContentOffset(scrollY, contentHeight)}px` : `${HEADER_PADDING}px`
+    marginTop: isDynamic ? `${calcHeaderContentTopMargin(scrollY, contentHeight)}px` : `${HEADER_PADDING}px`
   }),
   title: {
     ...theme.typography.h1
