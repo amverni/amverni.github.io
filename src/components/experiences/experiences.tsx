@@ -2,8 +2,8 @@ import { experienceData } from 'assets/data/experiences/experiences';
 import { Section } from 'components/shared/section/section';
 import { SectionsContainer } from 'components/shared/section/sectionsContainer';
 import React from 'react';
+import { ExperienceInfo } from 'types/experience.types';
 import { Experience } from './experience/experience';
-import { ExperienceInfo } from './experience/experience.types';
 
 export const Experiences: React.FC = () => {
   const {

@@ -66,5 +66,4 @@ This led to us developing the concepts of image property categories and task req
 are found across domains of image annotation tasks. 
 From these categories, we developed a test harness which should guide the design of image annotation tools 
 and testbeds that wish to generalize across a range of domains. 
-This work was published and presented at UIST 2019 and the abstract can be found 
-[here](https://amverni.github.io/assets/files/towards_universal_evaluation_of_image_annotation_interfaces.pdf).
+This work was published and presented at UIST 2019.

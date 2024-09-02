@@ -10,11 +10,12 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     height: '60px',
     alignItems: 'center',
     position: 'sticky',
-    top: 0
+    top: 0,
+    zIndex: 2
   },
   navLink: {
     fontSize: '24px',
-    fontWeight: 200,
+    fontWeight: 300,
     color: theme.palette.common.white,
     textDecoration: 'none',
     transition: theme.transitions.create('color', { duration: theme.transitions.duration.shorter }),

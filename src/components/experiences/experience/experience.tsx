@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import { stringifyDateRange } from 'utils/dateUtils';
 import { useFileText } from 'hooks/useFileText';
 import Markdown from 'react-markdown';
-import { Link } from 'components/shared/link/link';
 import { Dialog } from 'components/shared/dialog/dialog';
-import { ExperienceInfo } from './experience.types';
+import { ExperienceInfo } from 'types/experience.types';
+import { Link as MuiLink, LinkProps } from '@mui/material';
 import { useStyles } from './experience.styles';
 
 interface ExperienceProps {
   experienceInfo: ExperienceInfo;
   imageLocation: 'left' | 'right';
 }
+
+const Link = (props: LinkProps): JSX.Element => <MuiLink underline="none" {...props} />;
 
 export const Experience: React.FC<ExperienceProps> = ({
   experienceInfo: {

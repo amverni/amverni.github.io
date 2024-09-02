@@ -1,4 +1,4 @@
-import { SocialMediaInfo } from 'components/about/socialMedia/socialMedia.types';
+import { SocialMediaInfo } from 'types/socialMedia.types';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';

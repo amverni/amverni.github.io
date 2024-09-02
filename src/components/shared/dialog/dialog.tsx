@@ -16,7 +16,7 @@ export const Dialog: React.FC<DialogProps> = ({
   const styles = useStyles();
 
   const dialogTitle = title && (
-    <DialogTitle className={styles.title}>
+    <DialogTitle>
       {title}
     </DialogTitle>
   );
@@ -25,7 +25,7 @@ export const Dialog: React.FC<DialogProps> = ({
     <MuiDialog {...props}>
       <div className={styles.header}>
         {dialogTitle}
-        <DialogActions className={styles.actions}>
+        <DialogActions>
           <CloseIcon onClick={props.onClose as (() => void)} className={styles.closeButton} />
         </DialogActions>
       </div>

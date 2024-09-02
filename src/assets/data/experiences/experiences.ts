@@ -1,4 +1,4 @@
-import { ExperienceInfos } from 'components/experiences/experience/experience.types';
+import { ExperienceInfos } from 'types/experience.types';
 import microsoftLogo from 'assets/img/experiences/microsoft.png';
 import copilotLogo from 'assets/img/experiences/copilot.svg';
 import bingChatEnterprise from 'assets/img/experiences/bingChatEnterprise.png';

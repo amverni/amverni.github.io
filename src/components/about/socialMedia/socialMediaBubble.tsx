@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from '@mui/material/Link';
+import { SocialMediaInfo } from 'types/socialMedia.types';
 import { useStyles } from './socialMediaBubble.styles';
-import { SocialMediaInfo } from './socialMedia.types';
 
 type SocialMediaBubbleProps = SocialMediaInfo;
 

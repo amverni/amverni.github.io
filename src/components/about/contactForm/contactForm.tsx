@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import TextField from '@mui/material/TextField';
-import { Button } from 'components/shared/button/button';
+import { Button } from '@mui/material';
 import { useStyles } from './contactForm.styles';
 
 export const ContactForm: React.FC = () => {
@@ -15,7 +15,7 @@ export const ContactForm: React.FC = () => {
       : (
         <>
           {hasEmailError && <ValidationError prefix="Email" field="email" errors={state.errors} className={styles.errorMessage} />}
-          <Button type="submit" disabled={state.submitting} className={styles.submit}>Send Message</Button>
+          <Button variant="contained" type="submit" disabled={state.submitting} className={styles.submit}>Send Message</Button>
         </>
       )
   );

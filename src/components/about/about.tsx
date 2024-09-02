@@ -3,8 +3,8 @@ import * as React from 'react';
 import { Section } from 'components/shared/section/section';
 import andrew from 'assets/img/andrew.jpg';
 import { aboutInfo } from 'assets/data/aboutInfo';
-import { Button } from 'components/shared/button/button';
 import Resume from 'assets/files/andrew_vernier_resume.pdf';
+import { Button } from '@mui/material';
 import { useStyles } from './about.styles';
 import { ContactForm } from './contactForm/contactForm';
 import { SocialMedias } from './socialMedia/socialMedias';
@@ -21,7 +21,7 @@ export const About: React.FC = () => {
           </div>
           <div className={styles.aboutColumn}>
             <p className={styles.bio}>{aboutInfo.bio}</p>
-            <Button href={Resume}>Resume</Button>
+            <Button variant="contained" href={Resume}>Resume</Button>
           </div>
         </div>
       </Section>

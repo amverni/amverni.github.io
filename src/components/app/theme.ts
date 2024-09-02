@@ -1,10 +1,12 @@
 import { createTheme } from '@mui/material/styles';
-import { blue, blueGrey, deepPurple } from '@mui/material/colors';
+import {
+  blue, blueGrey, cyan, indigo, teal
+} from '@mui/material/colors';
 
 export const appTheme = createTheme({
   palette: {
-    primary: blue,
-    secondary: deepPurple,
+    primary: indigo,
+    secondary: cyan,
     common: {
       white: '#fff',
       black: '#000'
@@ -61,21 +63,45 @@ export const appTheme = createTheme({
   },
   components: {
     MuiButton: {
-      variants: [
-        {
-          props: { variant: 'contained' },
-          style: ({ theme }) => ({
-            ...theme.typography.body1,
-            textTransform: 'unset',
-            borderRadius: '1000px',
-            maxWidth: 'fit-content',
-            transition: theme.transitions.create(['background-color', 'box-shadow'])
-            // '&:hover': {
-            // backgroundColor: theme.palette.secondary.main
-            // }
-          })
+      styleOverrides: {
+        root: ({ theme }) => ({
+          ...theme.typography.body1,
+          textTransform: 'unset',
+          borderRadius: '10px',
+          maxWidth: 'fit-content',
+          color: 'white',
+          backgroundColor: theme.palette.primary.main,
+          transition: theme.transitions.create(['background-color', 'box-shadow', 'transform'], { duration: theme.transitions.duration.shortest }),
+          '&:hover': {
+            backgroundColor: theme.palette.primary.main,
+            boxShadow: '-2px 2px 6px 0px gray',
+            transform: 'translate(2px, -2px)'
+          },
+          '&:active': {
+            boxShadow: 'unset',
+            transform: 'unset'
+          }
+        })
+      }
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          cursor: 'pointer',
+          transition:
+            theme.transitions.create(['color', 'box-shadow', 'transform', 'filter'], { duration: theme.transitions.duration.shortest }),
+          '&:hover': {
+            color: `${theme.palette.primary.light}`
+          }
+        })
+      }
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: '0 24px'
         }
-      ]
+      }
     }
   }
 });
