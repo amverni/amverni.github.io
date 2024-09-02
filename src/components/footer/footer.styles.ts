@@ -16,24 +16,5 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     margin: 0,
     justifyContent: 'center',
     width: '100%'
-  },
-  emailIconContainer: {
-    /* make size of larger icon (on hover) so other text doesn't move. */
-    width: '20px',
-    height: '24px',
-
-    /* center icon so it grows from center */
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-    transition: theme.transitions.create('font-size', { duration: theme.transitions.duration.shortest }),
-    fontSize: '16px',
-    '&:hover': {
-      fontSize: '20px'
-    }
-  },
-  emailIcon: {
-    color: theme.palette.common.white
   }
 }));

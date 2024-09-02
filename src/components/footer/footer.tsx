@@ -11,11 +11,6 @@ export const Footer: React.FC = () => {
         <span>
           Andrew M. Vernier
         </span>
-        <span className={styles.emailIconContainer}>
-          <a href="mailto:amverni@umich.edu">
-            <EmailIcon className={styles.emailIcon} fontSize="inherit" />
-          </a>
-        </span>
       </p>
     </div>
   );

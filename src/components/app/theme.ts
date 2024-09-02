@@ -71,11 +71,11 @@ export const appTheme = createTheme({
           maxWidth: 'fit-content',
           color: 'white',
           backgroundColor: theme.palette.primary.main,
-          transition: theme.transitions.create(['background-color', 'box-shadow', 'transform'], { duration: theme.transitions.duration.shortest }),
+          transition: theme.transitions.create(['background-color', 'box-shadow', 'transform'], { duration: theme.transitions.duration.shortest, delay: '50ms' }),
           '&:hover': {
             backgroundColor: theme.palette.primary.main,
             boxShadow: '-2px 2px 6px 0px gray',
-            transform: 'translate(2px, -2px)'
+            transform: 'translate(1px, -1px)'
           },
           '&:active': {
             boxShadow: 'unset',
@@ -89,7 +89,7 @@ export const appTheme = createTheme({
         root: ({ theme }) => ({
           cursor: 'pointer',
           transition:
-            theme.transitions.create(['color', 'box-shadow', 'transform', 'filter'], { duration: theme.transitions.duration.shortest }),
+            theme.transitions.create(['color', 'box-shadow', 'transform', 'filter', 'height', 'width'], { duration: theme.transitions.duration.shortest, delay: '50ms' }),
           '&:hover': {
             color: `${theme.palette.primary.light}`
           }

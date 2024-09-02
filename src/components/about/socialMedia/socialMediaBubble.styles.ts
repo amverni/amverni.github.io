@@ -25,7 +25,7 @@ export const useStyles = makeStyles<AppTheme, SocialMediaBubbleStyleProps>((them
       width: '100%',
       height: '100%'
     },
-    transition: theme.transitions.create(['height', 'width'], { duration: theme.transitions.duration.shorter })
+    transition: theme.transitions.create(['height', 'width'], { duration: theme.transitions.duration.shortest })
   }),
   logo: {
     height: '50%',
