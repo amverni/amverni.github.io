@@ -3,18 +3,18 @@ import { type AppTheme } from 'components/app/theme';
 import colchuckImage from 'assets/img/colchuck.jpg';
 import { convertPercentToVal } from 'utils/convertPercentToVal';
 
-const HEADER_PADDING = 50;
+const HEADER_MARGIN = 20;
 const MAX_OPACITY = 1;
 const MIN_OPACITY = 0;
 
 const calcMaxExtraTopMargin = (contentHeight: number): number => {
-  const headerContentWithObservedPadding = contentHeight + (2 * HEADER_PADDING);
+  const headerContentWithObservedPadding = contentHeight + (2 * HEADER_MARGIN);
   return window.innerHeight - headerContentWithObservedPadding;
 };
 
 const calcHeaderContentTopMargin = (scroll: number, contentHeight: number): number => {
   const maxExtraTopPadding = calcMaxExtraTopMargin(contentHeight);
-  return Math.min(maxExtraTopPadding, scroll) + HEADER_PADDING;
+  return Math.min(maxExtraTopPadding, scroll) + HEADER_MARGIN;
 };
 
 const calcHexAlpha = (scroll: number, contentHeight: number): string => {
@@ -63,13 +63,20 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
   },
   headerContent: ({ scrollY, contentHeight, isDynamic }) => ({
     textAlign: 'center',
-    margin: `${HEADER_PADDING}px`,
-    marginTop: isDynamic ? `${calcHeaderContentTopMargin(scrollY, contentHeight)}px` : `${HEADER_PADDING}px`
+    margin: `${HEADER_MARGIN}px`,
+    marginTop: isDynamic ? `${calcHeaderContentTopMargin(scrollY, contentHeight)}px` : `${HEADER_MARGIN}px`
   }),
   title: {
     ...theme.typography.h1
   },
   subtitle: {
-    ...theme.typography.subtitle1
+    ...theme.typography.subtitle1,
+    display: 'flex',
+    gap: '5px',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
+  },
+  descriptor: {
+    whiteSpace: 'nowrap'
   }
 }));

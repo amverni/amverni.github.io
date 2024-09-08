@@ -1,10 +1,16 @@
 import { makeStyles } from '@mui/styles';
 import { AppTheme } from 'components/app/theme';
 
+export const IS_SMALL_THRESHOLD = 900;
+const SMALL_MEDIA_QUERY = `@media (max-width: ${IS_SMALL_THRESHOLD}px)`;
+
 export const useStyles = makeStyles<AppTheme>((theme) => ({
   aboutContainer: {
     display: 'flex',
-    gap: '30px'
+    gap: '30px',
+    [SMALL_MEDIA_QUERY]: {
+      flexDirection: 'column'
+    }
   },
   aboutColumn: {
     flex: '1',

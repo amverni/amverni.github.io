@@ -9,11 +9,13 @@ const CURSOR_END_DURATION = 3500;
 interface TypingEffectProps {
   text: string;
   as?: ElementType;
-  className?: string
+  classes?: {
+    root?: string;
+  }
 }
 
 export const TypingEffect: React.FC<TypingEffectProps> = ({
-  text, as: Tag = 'p', className
+  text, as: Tag = 'p', classes
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -64,18 +66,11 @@ export const TypingEffect: React.FC<TypingEffectProps> = ({
     return () => cursorTimer && clearTimeout(cursorTimer);
   }, [showCursor, isTyping, hasCursorFaded]);
 
-  /* Balance cursor with space to ensure centering. */
-  const prefix = currentIndex > 0 ? '\u00A0' : '';
-  const cursor = showCursor ? '|' : '\u00A0';
-
   return (
-    <Tag className={className}>
-      <span className={styles.cursor}>
-        {prefix}
-      </span>
+    <Tag className={classes?.root}>
       {text.substring(0, currentIndex)}
-      <span className={styles.cursor}>
-        {cursor}
+      <span className={showCursor ? undefined : styles.cursorHidden}>
+        |
       </span>
     </Tag>
   );

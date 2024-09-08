@@ -1,4 +1,4 @@
-import { TypingEffect } from 'components/shared/typingEffect';
+import { TypingEffect } from 'components/shared/typingEffect/typingEffect';
 import React, { useEffect, useRef, useState } from 'react';
 import { useStyles } from './header.styles';
 
@@ -31,9 +31,13 @@ export const Header: React.FC<HeaderProps> = ({ isDynamic }:HeaderProps) => {
         </>
       )}
       <div className={styles.headerContent} ref={headerContent}>
-        <TypingEffect text="Andrew M. Vernier" as="h1" className={styles.title} />
+        <TypingEffect text="Andrew M. Vernier" as="h1" classes={{ root: styles.title }} />
         <p className={styles.subtitle}>
-          Sports Enthusiast | Adventurer | Software Engineer
+          <span className={styles.descriptor}>Sports Enthusiast</span>
+          |
+          <span className={styles.descriptor}>Adventurer</span>
+          |
+          <span className={styles.descriptor}>Software Engineer</span>
         </p>
       </div>
     </div>

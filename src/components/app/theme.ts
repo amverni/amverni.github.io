@@ -3,6 +3,12 @@ import {
   blue, blueGrey, cyan, indigo, teal
 } from '@mui/material/colors';
 
+export const TYPOGRAPHY_SMALL_THRESHOLD = 550;
+export const TYPOGRAPHY_LARGE_THRESHOLD = 800;
+const SMALL_MEDIA_QUERY = `@media (max-width: ${TYPOGRAPHY_SMALL_THRESHOLD}px)`;
+const MEDIUM_MEDIA_QUERY = `@media (max-width: ${TYPOGRAPHY_LARGE_THRESHOLD}px)`;
+const LARGE_MEDIA_QUERY = `@media (min-width: ${TYPOGRAPHY_LARGE_THRESHOLD + 1}px)`;
+
 export const appTheme = createTheme({
   palette: {
     primary: indigo,
@@ -14,46 +20,102 @@ export const appTheme = createTheme({
   },
   typography: {
     h1: {
-      fontSize: '80px',
       fontWeight: 500,
-      margin: 0
+      margin: 0,
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '80px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '56px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '44px'
+      }
     },
     subtitle1: {
-      fontSize: '32px',
       fontWeight: 300,
-      margin: 0
+      margin: 0,
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '32px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '24px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '20px'
+      }
     },
     h2: {
-      fontSize: '40px',
       fontWeight: 500,
       margin: 0,
-      color: blueGrey[900]
+      color: blueGrey[900],
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '40px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '36px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '32px'
+      }
     },
     h3: {
-      fontSize: '32px',
       fontWeight: 500,
       margin: 0,
-      color: blueGrey[900]
+      color: blueGrey[900],
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '32px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '28px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '24px'
+      }
     },
     subtitle2: {
-      fontSize: '24px',
       fontWeight: 400,
       margin: 0,
-      color: blueGrey[800]
+      color: blueGrey[800],
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '24px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '22px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '20px'
+      }
     },
     h4: {
     },
     h5: {
     },
     h6: {
-      fontSize: '24px',
-      color: blueGrey[900]
+      color: blueGrey[900],
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '24px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '22px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '20px'
+      }
     },
     body1: {
-      fontSize: '20px',
       textAlign: 'justify',
       margin: '10px 0',
-      color: blueGrey[700]
+      color: blueGrey[700],
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '18px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '17px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '16px'
+      }
     }
   },
   transitions: {
