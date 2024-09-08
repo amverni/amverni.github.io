@@ -3,7 +3,7 @@ import MuiDialog, { type DialogProps as MuiDialogProps } from '@mui/material/Dia
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/CloseRounded';
 import { useStyles } from './dialog.styles';
 
 interface DialogProps extends MuiDialogProps {

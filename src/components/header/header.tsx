@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ isDynamic }:HeaderProps) => {
     window.addEventListener('scroll', () => {
       setScrollY(window.scrollY);
     });
-  });
+  }, []);
 
   return (
     <div className={styles.headerContainer} ref={container}>

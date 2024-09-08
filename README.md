@@ -65,3 +65,5 @@ Update favicon
 Better validation on contact form
 Add mobile
 Dark mode
+Fix name with cursor for mobile (or make name smaller)
+

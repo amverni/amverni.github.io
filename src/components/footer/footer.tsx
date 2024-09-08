@@ -1,5 +1,4 @@
 import React from 'react';
-import EmailIcon from '@mui/icons-material/EmailRounded';
 import { useStyles } from './footer.styles';
 
 export const Footer: React.FC = () => {

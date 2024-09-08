@@ -1,17 +1,37 @@
 import { makeStyles } from '@mui/styles';
 import { type AppTheme } from 'components/app/theme';
 
+export const IS_SMALL_THRESHOLD = 570;
+const NAV_BAR_HEIGHT = 60;
+
+const SMALL_MEDIA_QUERY = `@media (max-width: ${IS_SMALL_THRESHOLD}px)`;
+const LARGE_MEDIA_QUERY = `@media (min-width: ${IS_SMALL_THRESHOLD + 1}px)`;
+
 export const useStyles = makeStyles<AppTheme>((theme) => ({
-  navContainer: {
+  navBarContainer: {
     display: 'flex',
-    gap: '20px',
-    backgroundColor: 'black',
-    justifyContent: 'center',
-    height: '60px',
-    alignItems: 'center',
+    backgroundColor: theme.palette.common.black,
     position: 'sticky',
     top: 0,
-    zIndex: 2
+    zIndex: 1,
+    [LARGE_MEDIA_QUERY]: {
+      justifyContent: 'center'
+    }
+  },
+  navLinksContainer: {
+    display: 'flex',
+    gap: '0 20px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [SMALL_MEDIA_QUERY]: {
+      flexDirection: 'column',
+      position: 'absolute',
+      left: 0,
+      top: '40px',
+      backgroundColor: theme.palette.common.black,
+      width: '100%',
+      paddingBottom: '10px'
+    }
   },
   navLink: {
     fontSize: '24px',
@@ -25,6 +45,25 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     },
     '&:hover:not(.active)': {
       color: theme.palette.secondary.light
+    },
+    [SMALL_MEDIA_QUERY]: {
+      lineHeight: '45px'
+    },
+    [LARGE_MEDIA_QUERY]: {
+      lineHeight: `${NAV_BAR_HEIGHT}px`
     }
+  },
+  navLinksWithMenuButton: {
+    margin: '0 20px',
+    width: '100%'
+  },
+  menuIconContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    height: `${NAV_BAR_HEIGHT}px`
+  },
+  menuIcon: {
+    color: theme.palette.common.white,
+    cursor: 'pointer'
   }
 }));
