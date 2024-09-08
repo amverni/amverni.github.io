@@ -2,10 +2,10 @@ import { makeStyles } from '@mui/styles';
 import { type AppTheme } from 'components/app/theme';
 
 export const IS_SMALL_THRESHOLD = 570;
-const NAV_BAR_HEIGHT = 60;
-
 const SMALL_MEDIA_QUERY = `@media (max-width: ${IS_SMALL_THRESHOLD}px)`;
 const LARGE_MEDIA_QUERY = `@media (min-width: ${IS_SMALL_THRESHOLD + 1}px)`;
+
+const NAV_BAR_HEIGHT = 60;
 
 export const useStyles = makeStyles<AppTheme>((theme) => ({
   navBarContainer: {

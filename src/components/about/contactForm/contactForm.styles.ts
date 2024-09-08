@@ -1,16 +1,31 @@
 import { makeStyles } from '@mui/styles';
 import { AppTheme } from 'components/app/theme';
 
+export const IS_SMALL_THRESHOLD = 800;
+const SMALL_MEDIA_QUERY = `@media (max-width: ${IS_SMALL_THRESHOLD}px)`;
+const LARGE_MEDIA_QUERY = `@media (min-width: ${IS_SMALL_THRESHOLD + 1}px)`;
+
 export const useStyles = makeStyles<AppTheme>((theme) => ({
   contactForm: {
     display: 'grid',
     gap: '10px',
-    gridTemplateAreas: `
-      "name email"
-      "subject subject"
-      "message message"
-      "submit submit"
-    `
+    [LARGE_MEDIA_QUERY]: {
+      gridTemplateAreas: `
+        "name email"
+        "subject subject"
+        "message message"
+        "submit submit"
+      `
+    },
+    [SMALL_MEDIA_QUERY]: {
+      gridTemplateAreas: `
+        "name"
+        "email"
+        "subject"
+        "message"
+        "submit"
+      `
+    }
   },
   name: {
     gridArea: 'name'
