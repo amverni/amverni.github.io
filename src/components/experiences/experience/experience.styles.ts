@@ -1,6 +1,9 @@
 import { makeStyles } from '@mui/styles';
 import { AppTheme } from 'components/app/theme';
 
+export const IS_SMALL_THRESHOLD = 530;
+const LARGE_MEDIA_QUERY = `@media (min-width: ${IS_SMALL_THRESHOLD}px)`;
+
 export const useStyles = makeStyles<AppTheme>((theme) => ({
   container: {
     display: 'flex',
@@ -8,10 +11,12 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     flexWrap: 'wrap'
   },
   reverseContainer: {
-    flexDirection: 'row-reverse'
+    [LARGE_MEDIA_QUERY]: {
+      flexDirection: 'row-reverse'
+    }
   },
   infoContainer: {
-    flex: 3,
+    flex: 2,
     minWidth: '300px',
     margin: 'auto'
   },
@@ -34,10 +39,22 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
   imageContainer: {
     flex: 1,
     margin: 'auto',
-    minWidth: '100px'
+    minWidth: '200px',
+    display: 'flex',
+    justifyContent: 'center'
   },
   clickableImage: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+    '&:hover': {
+      boxShadow: '-4px 4px 8px 0px gray',
+      transform: 'translate(2px, -2px)'
+    },
+    '&:active': {
+      boxShadow: 'unset',
+      transform: 'unset',
+      filter: 'brightness(90%)'
+    },
+    transition: theme.transitions.create(['box-shadow', 'transform', 'filter'], { duration: theme.transitions.duration.shortest, delay: '50ms' })
   },
   image: {
     width: '100%',

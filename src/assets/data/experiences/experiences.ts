@@ -53,7 +53,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: copilotLogo,
         alt: 'M365 Copilot Logo',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '200px'
+        }
       }
     },
     {
@@ -72,7 +75,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: bingChatEnterprise,
         alt: 'Bing Chat Enterprise UX snippet',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '500px'
+        }
       }
     },
     {
@@ -91,7 +97,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: microsoftLogo,
         alt: 'Microsoft logo',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '300px'
+        }
       }
     },
     {
@@ -109,7 +118,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: eecsLogo,
         alt: 'Michigan Electrical Engineering and Computer Science',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '400px'
+        }
       }
     },
     {
@@ -127,7 +139,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: amazonLogo,
         alt: 'Amazon Logo',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '300px'
+        }
       }
     },
     {
@@ -146,7 +161,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: garminInstinctTacticalImage,
         alt: 'Garmin Instinct Tactical',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '400px'
+        }
       }
     },
     {
@@ -165,7 +183,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: garminAutoOemLogo,
         alt: 'Garmin Automotive OEM',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '400px'
+        }
       }
     }
   ],
@@ -185,7 +206,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: cromaLogo,
         alt: 'CROMA Lab Logo',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '400px'
+        }
       }
     }
   ],
@@ -238,7 +262,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: umrhcLogo,
         alt: 'Michigan Roller Hockey Club Logo',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '300px'
+        }
       }
     }
   ],
@@ -259,7 +286,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: michiganSeal,
         alt: 'University of Michigan Seal',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '300px'
+        }
       }
     },
     {
@@ -278,7 +308,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: michiganWolverineLogo,
         alt: 'University of Michigan Wolverine Logo',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '300px'
+        }
       }
     },
     {
@@ -296,7 +329,10 @@ export const experienceData: ExperienceInfos = {
       image: {
         src: tecnunLogo,
         alt: 'Universidad de Tecnun Seal',
-        zoomable: false
+        zoomable: false,
+        style: {
+          maxWidth: '400px'
+        }
       }
     }
   ],

@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 export type ExperienceInfo = {
   title: string;
   entity?: {
@@ -16,6 +18,7 @@ export type ExperienceInfo = {
     src: string;
     alt: string;
     zoomable: boolean;
+    style?: CSSProperties;
   };
 }
 

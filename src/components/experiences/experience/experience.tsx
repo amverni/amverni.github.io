@@ -94,7 +94,12 @@ export const Experience: React.FC<ExperienceProps> = ({
       role="button"
       tabIndex={0}
     >
-      <img className={imageClassName} src={imageData.src} alt={imageData.alt} />
+      <img
+        className={imageClassName}
+        src={imageData.src}
+        alt={imageData.alt}
+        style={imageData.style}
+      />
     </div>
   );
 
@@ -109,10 +114,12 @@ export const Experience: React.FC<ExperienceProps> = ({
     </Dialog>
   );
 
-  const containerClassNames = `${styles.container} ${imageLocation === 'left' ? styles.reverseContainer : ''}`;
+  const containerClassNames = `${styles.container} ${imageLocation === 'left' ? '' : styles.reverseContainer}`;
 
   return (
     <div className={containerClassNames}>
+      {image}
+      {imageDialog}
       <div className={styles.infoContainer}>
         {header}
         {entity}
@@ -121,8 +128,6 @@ export const Experience: React.FC<ExperienceProps> = ({
         {description}
         {technicalSkills}
       </div>
-      {image}
-      {imageDialog}
     </div>
   );
 };

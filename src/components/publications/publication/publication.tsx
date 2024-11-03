@@ -50,10 +50,10 @@ export const Publication: React.FC<PublicationProps> = ({
   );
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         {thumbnail}
-        <div>
+        <div className={styles.details}>
           <Link href={link} underline="none">
             <h3 className={styles.title}>{title}</h3>
           </Link>
@@ -69,6 +69,6 @@ export const Publication: React.FC<PublicationProps> = ({
         </div>
       </div>
       {abstractDialog}
-    </>
+    </div>
   );
 };

@@ -16,7 +16,8 @@ export const appTheme = createTheme({
     common: {
       white: '#fff',
       black: '#000'
-    }
+    },
+    grey: blueGrey
   },
   typography: {
     h1: {
