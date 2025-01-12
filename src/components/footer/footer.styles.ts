@@ -1,4 +1,4 @@
-import type { AppTheme } from 'components/app/theme';
+import { getPrimaryGradientColor, getSecondaryGradientColor, type AppTheme } from 'components/app/theme';
 import { makeStyles } from '@mui/styles';
 
 export const IS_SMALL_THRESHOLD = 550;
@@ -7,7 +7,7 @@ const LARGE_MEDIA_QUERY = `@media (min-width: ${IS_SMALL_THRESHOLD + 1}px)`;
 
 export const useStyles = makeStyles<AppTheme>((theme) => ({
   footerContainer: {
-    background: `linear-gradient(to right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
+    background: `linear-gradient(to right, ${getSecondaryGradientColor(theme)}, ${getPrimaryGradientColor(theme)})`,
     height: '48px',
     display: 'flex',
     alignItems: 'center'

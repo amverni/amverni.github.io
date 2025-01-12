@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import { type AppTheme } from 'components/app/theme';
+import { getPrimaryGradientColor, getSecondaryGradientColor, type AppTheme } from 'components/app/theme';
 import colchuckImage from 'assets/img/colchuck.jpg';
 import { convertPercentToVal } from 'utils/convertPercentToVal';
 
@@ -17,11 +17,27 @@ const calcHeaderContentTopMargin = (scroll: number, contentHeight: number): numb
   return Math.min(maxExtraTopPadding, scroll) + HEADER_MARGIN;
 };
 
-const calcHexAlpha = (scroll: number, contentHeight: number): string => {
+const calcPercentScroll = (scroll: number, contentHeight: number): number => {
   const maxExtraTopPadding = calcMaxExtraTopMargin(contentHeight);
   const percentScroll = Math.min(scroll / maxExtraTopPadding, 1);
+  return percentScroll;
+};
+
+const calcHexAlpha = (scroll: number, contentHeight: number): string => {
+  const percentScroll = calcPercentScroll(scroll, contentHeight);
   const opacity = convertPercentToVal(percentScroll, MAX_OPACITY * 0xff, MIN_OPACITY * 0xff);
   return opacity.toString(16).split('.')[0].padStart(2, '0');
+};
+
+const BACKGROUND_OPACITY_FADEOUT_THRESHOLD = 0.5;
+const BACKGROUND_MAX_OPACITY = 0.5;
+const calcHeaderContentBackgroundOpacity = (scroll: number, contentHeight: number): number => {
+  const percentScroll = calcPercentScroll(scroll, contentHeight)
+    / BACKGROUND_OPACITY_FADEOUT_THRESHOLD;
+  return Math.min(
+    Math.max((1 - percentScroll) * BACKGROUND_MAX_OPACITY, 0),
+    BACKGROUND_MAX_OPACITY
+  );
 };
 
 interface HeaderStylesProps {
@@ -39,7 +55,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundImage: isDynamic ? undefined : `linear-gradient(to right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`
+    backgroundImage: isDynamic ? undefined : `linear-gradient(to right, ${getSecondaryGradientColor(theme)}, ${getPrimaryGradientColor(theme)})`
   }),
   backgroundImage: {
     backgroundImage: `url(${colchuckImage})`,
@@ -54,7 +70,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
   backgroundImageFilter: ({ scrollY, contentHeight, isDynamic }) => {
     const alpha = isDynamic ? calcHexAlpha(scrollY, contentHeight) : 'ff';
     return {
-      backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.main}${alpha}, ${theme.palette.primary.main}${alpha})`,
+      backgroundImage: `linear-gradient(to right, ${getSecondaryGradientColor(theme)}${alpha}, ${getPrimaryGradientColor(theme)}${alpha})`,
       width: '100%',
       height: '100%',
       zIndex: '-1',
@@ -63,7 +79,13 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
   },
   headerContent: ({ scrollY, contentHeight, isDynamic }) => ({
     textAlign: 'center',
-    margin: `${HEADER_MARGIN}px`,
+    width: 'fit-content',
+    maxWidth: '80%',
+    margin: 'auto',
+    marginBottom: `${HEADER_MARGIN}px`,
+    background: isDynamic ? `rgba(50, 50, 50, ${calcHeaderContentBackgroundOpacity(scrollY, contentHeight)})` : undefined,
+    padding: '20px',
+    borderRadius: '20px',
     marginTop: isDynamic ? `${calcHeaderContentTopMargin(scrollY, contentHeight)}px` : `${HEADER_MARGIN}px`
   }),
   title: {

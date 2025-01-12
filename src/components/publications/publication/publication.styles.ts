@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import { AppTheme } from 'components/app/theme';
+import { AppTheme, getShadowColor } from 'components/app/theme';
 
 const GAP = 30;
 const THUMBNAIL_WIDTH = 200;
@@ -22,13 +22,14 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     }
   },
   thumbnailLink: {
-    border: 'solid 0.5px gray',
+    border: `solid 0.5px ${getShadowColor()}`,
     borderRadius: '4px',
     overflow: 'hidden',
     height: '100%',
     margin: 'auto',
+    backgroundColor: 'white',
     '&:hover': {
-      boxShadow: '-4px 4px 8px 0px gray',
+      boxShadow: `-4px 4px 8px 0px ${getShadowColor()}`,
       transform: 'translate(2px, -2px)'
     },
     '&:active': {

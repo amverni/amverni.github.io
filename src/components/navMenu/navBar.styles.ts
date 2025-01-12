@@ -9,6 +9,7 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
   navBarContainer: {
     display: 'flex',
     backgroundColor: theme.palette.common.black,
+    boxShadow: `0 2px 4px ${theme.palette.common.black}`,
     position: 'sticky',
     top: 0,
     zIndex: 1,

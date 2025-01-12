@@ -1,15 +1,15 @@
 import { makeStyles } from '@mui/styles';
-import { AppTheme } from 'components/app/theme';
+import { AppTheme, getShadowColor } from 'components/app/theme';
 import { blueGrey } from '@mui/material/colors';
 
-export const useStyles = makeStyles<AppTheme>({
+export const useStyles = makeStyles<AppTheme>((theme) => ({
   header: {
     display: 'flex',
     justifyContent: 'space-between',
-    boxShadow: '0px 0px 8px gray'
+    boxShadow: `0px 0px 8px ${getShadowColor()}`
   },
   closeButton: {
     cursor: 'pointer',
-    color: blueGrey[900]
+    color: theme.palette.mode === 'dark' ? blueGrey[100] : blueGrey[900]
   }
-});
+}));

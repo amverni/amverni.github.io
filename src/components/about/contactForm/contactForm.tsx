@@ -22,10 +22,42 @@ export const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.contactForm}>
-      <TextField label="Name" name="name" required disabled={isFormDisabled} className={styles.name} />
-      <TextField label="Email" name="email" type="email" error={hasEmailError} required disabled={isFormDisabled} className={styles.email} />
-      <TextField label="Subject" name="subject" required disabled={isFormDisabled} className={styles.subject} />
-      <TextField label="Message" name="message" multiline minRows={3} required disabled={isFormDisabled} className={styles.message} />
+      <TextField
+        label="Name"
+        name="name"
+        required
+        disabled={isFormDisabled}
+        className={styles.name}
+        color="info"
+      />
+      <TextField
+        label="Email"
+        name="email"
+        type="email"
+        error={hasEmailError}
+        required
+        disabled={isFormDisabled}
+        className={styles.email}
+        color="info"
+      />
+      <TextField
+        label="Subject"
+        name="subject"
+        required
+        disabled={isFormDisabled}
+        className={styles.subject}
+        color="info"
+      />
+      <TextField
+        label="Message"
+        name="message"
+        multiline
+        minRows={3}
+        required
+        disabled={isFormDisabled}
+        className={styles.message}
+        color="info"
+      />
       <div className={styles.actionOrInfoContainer}>{actionOrInfoContent}</div>
     </form>
   );
