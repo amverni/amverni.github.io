@@ -2,6 +2,7 @@ I conducted research on hybrid intelligence systems (combining human and artific
 and human-computer interaction in the [Crowds and Machines (CROMA) Lab](http://croma.eecs.umich.edu/croma.html) 
 advised by [Dr. Walter S. Lasecki](http://croma.eecs.umich.edu/index.html).
 
+#### Conversation Disentanglement
 My most recent project was using machine learning for conversation disentanglement which is the separation of 
 distinct conversations that have occurred in the same thread over the same period of time.
 [Previous work](https://www.aclweb.org/anthology/P19-1374/) had already proven this to be possible with high 
@@ -47,6 +48,7 @@ Another important aspect was running experiments to determine the effectiveness 
 amounts of data and various levels of entangled data. 
 We will use these results to guide our suggestion for choosing data to annotate for new users in new domains.
 
+#### Image Annotation Interfaces
 Previously I also did research in the space of image annotation tools where I worked on two main projects. 
 First, I worked on an image annotation tool that aggragated crowd worker's responses for a particle filtering 
 task to reconstruct 3D scenes from 2D images particularly geared towards images of vehicles. 

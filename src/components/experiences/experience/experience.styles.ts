@@ -30,6 +30,10 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
     ...theme.typography.body1,
     '& p': {
       marginBlock: '10px'
+    },
+    '& h4': {
+      ...theme.typography.h4,
+      marginTop: '20px'
     }
   },
   skills: {

@@ -48,6 +48,7 @@ export const appTheme = createTheme({
     h1: {
       fontWeight: 500,
       margin: 0,
+      textAlign: 'center',
       [LARGE_MEDIA_QUERY]: {
         fontSize: '80px'
       },
@@ -74,6 +75,7 @@ export const appTheme = createTheme({
     h2: {
       fontWeight: 500,
       margin: 0,
+      textAlign: 'center',
       color: isDarkMode ? blueGrey[100] : blueGrey[900],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '40px'
@@ -88,6 +90,7 @@ export const appTheme = createTheme({
     h3: {
       fontWeight: 500,
       margin: 0,
+      textAlign: 'left',
       color: isDarkMode ? blueGrey[200] : blueGrey[900],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '32px'
@@ -114,6 +117,19 @@ export const appTheme = createTheme({
       }
     },
     h4: {
+      fontWeight: 700,
+      margin: 0,
+      textAlign: 'left',
+      color: isDarkMode ? blueGrey[300] : blueGrey[800],
+      [LARGE_MEDIA_QUERY]: {
+        fontSize: '20px'
+      },
+      [MEDIUM_MEDIA_QUERY]: {
+        fontSize: '17px'
+      },
+      [SMALL_MEDIA_QUERY]: {
+        fontSize: '16px'
+      }
     },
     h5: {
     },

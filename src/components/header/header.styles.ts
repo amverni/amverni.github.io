@@ -78,7 +78,6 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
     };
   },
   headerContent: ({ scrollY, contentHeight, isDynamic }) => ({
-    textAlign: 'center',
     width: 'fit-content',
     maxWidth: '80%',
     margin: 'auto',
