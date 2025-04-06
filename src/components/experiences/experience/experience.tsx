@@ -6,7 +6,6 @@ import { Dialog } from 'components/shared/dialog/dialog';
 import { ExperienceInfo } from 'types/experience.types';
 import { Link as MuiLink, LinkProps } from '@mui/material';
 import { CollapsibleContainer } from 'components/shared/collapsibleContainer/collapsibleContainer';
-import { CollapseButton } from 'components/shared/collapsibleContainer/collapseButton';
 import { useStyles } from './experience.styles';
 
 const COLLAPSED_HEIGHT = 200;
@@ -124,21 +123,16 @@ export const Experience: React.FC<ExperienceProps> = ({
     <div className={containerClassNames}>
       {image}
       {imageDialog}
-      {/* <Collapse collapsedSize="400px" className={styles.infoContainer}> */}
-      {/* <CollapsibleContainer className={styles.i
-      nfoContainer} collapsedHeight={COLLAPSED_HEIGHT}> */}
       <div className={styles.infoContainer}>
         {header}
         {entity}
         {timerange}
         {note}
-        <CollapsibleContainer collapsedHeight={200}>
+        <CollapsibleContainer collapsedHeight={COLLAPSED_HEIGHT}>
           {description}
           {technicalSkills}
         </CollapsibleContainer>
       </div>
-      {/* </Collapse> */}
-      {/* </CollapsibleContainer> */}
     </div>
   );
 };

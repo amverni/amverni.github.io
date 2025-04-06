@@ -1,25 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { CollapsibleContainerContextProvider, useCollapsibleContainerContext } from './collapsibleContainerContext';
 import { useStyles } from './collapsibleContainer.styles';
-import { CollapseButton } from './collapseButton';
 
 interface CollapsibleContainerContentProps {
   className?: string;
   collapsedHeight: number;
 }
 
-const CollapsibleContainerContent: React.FC<CollapsibleContainerContentProps> = ({
+export const CollapsibleContainer: React.FC<CollapsibleContainerContentProps> = ({
   className,
   collapsedHeight,
   children
 }) => {
   const styles = useStyles({ collapsedHeight });
-  const {
-    setIsCollapsible,
-    setIsCollapsed,
-    isCollapsed,
-    isCollapsible
-  } = useCollapsibleContainerContext();
+  const [isCollapsible, setIsCollapsible] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const contentHeight = containerRef.current?.clientHeight;
   useEffect(() => {
@@ -44,13 +38,3 @@ const CollapsibleContainerContent: React.FC<CollapsibleContainerContentProps> = 
     </div>
   );
 };
-
-interface CollapsibleContainerProps extends CollapsibleContainerContentProps {
-  isCollapsible?: boolean;
-}
-
-export const CollapsibleContainer: React.FC<CollapsibleContainerProps> = (props) => (
-  <CollapsibleContainerContextProvider>
-    <CollapsibleContainerContent {...props} />
-  </CollapsibleContainerContextProvider>
-);
