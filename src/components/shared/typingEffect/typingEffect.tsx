@@ -69,7 +69,7 @@ export const TypingEffect: React.FC<TypingEffectProps> = ({
   return (
     <Tag className={classes?.root}>
       {text.substring(0, currentIndex)}
-      <span className={showCursor ? undefined : styles.cursorHidden}>
+      <span className={showCursor ? styles.cursor : `${styles.cursorHidden} ${styles.cursor}`}>
         |
       </span>
     </Tag>

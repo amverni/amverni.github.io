@@ -26,13 +26,14 @@ export const CollapsibleContainer: React.FC<CollapsibleContainerContentProps> = 
   const classNames = isCollapsed ? `${className} ${styles.collapsed}` : className;
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       className={classNames}
       ref={containerRef}
       onClick={() => isCollapsible && setIsCollapsed(!isCollapsed)}
-      onKeyPress={() => setIsCollapsed(!isCollapsed)}
-      // role=""
+      onKeyPress={(event) => (event.key === 'Enter') && setIsCollapsed(!isCollapsed)}
+      role="button"
+      aria-expanded={!isCollapsed}
+      tabIndex={0}
     >
       {children}
     </div>

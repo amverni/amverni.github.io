@@ -79,7 +79,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
   },
   headerContent: ({ scrollY, contentHeight, isDynamic }) => ({
     width: 'fit-content',
-    maxWidth: '80%',
+    maxWidth: '90%',
     margin: 'auto',
     marginBottom: `${HEADER_MARGIN}px`,
     background: isDynamic ? `rgba(50, 50, 50, ${calcHeaderContentBackgroundOpacity(scrollY, contentHeight)})` : undefined,
@@ -88,7 +88,8 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
     marginTop: isDynamic ? `${calcHeaderContentTopMargin(scrollY, contentHeight)}px` : `${HEADER_MARGIN}px`
   }),
   title: {
-    ...theme.typography.h1
+    ...theme.typography.h1,
+    fontFamily: 'monospace'
   },
   subtitle: {
     ...theme.typography.subtitle1,

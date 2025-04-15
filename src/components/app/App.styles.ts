@@ -1,14 +1,18 @@
 import { makeStyles } from '@mui/styles';
+import { AppTheme } from './theme';
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles<AppTheme>((theme) => ({
   appContainer: {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column'
   },
-  main: {
+  mainContent: {
     width: '90%',
-    margin: '20px auto',
-    flexGrow: 1
+    margin: '20px auto'
+  },
+  main: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.mode === 'dark' ? theme.palette.common.black : theme.palette.common.white
   }
-});
+}));

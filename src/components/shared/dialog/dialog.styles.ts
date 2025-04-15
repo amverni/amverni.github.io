@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles';
 import { AppTheme, getShadowColor } from 'components/app/theme';
-import { blueGrey } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 export const useStyles = makeStyles<AppTheme>((theme) => ({
   header: {
@@ -10,6 +10,6 @@ export const useStyles = makeStyles<AppTheme>((theme) => ({
   },
   closeButton: {
     cursor: 'pointer',
-    color: theme.palette.mode === 'dark' ? blueGrey[100] : blueGrey[900]
+    color: theme.palette.mode === 'dark' ? grey[100] : grey[900]
   }
 }));

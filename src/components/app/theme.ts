@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material/styles';
 import {
-  blueGrey, cyan, indigo
+  cyan, indigo, grey
 } from '@mui/material/colors';
 
-export const TYPOGRAPHY_SMALL_THRESHOLD = 575;
-export const TYPOGRAPHY_LARGE_THRESHOLD = 825;
+export const TYPOGRAPHY_SMALL_THRESHOLD = 650;
+export const TYPOGRAPHY_LARGE_THRESHOLD = 880;
 const SMALL_MEDIA_QUERY = `@media (max-width: ${TYPOGRAPHY_SMALL_THRESHOLD}px)`;
 const MEDIUM_MEDIA_QUERY = `@media (max-width: ${TYPOGRAPHY_LARGE_THRESHOLD}px)`;
 const LARGE_MEDIA_QUERY = `@media (min-width: ${TYPOGRAPHY_LARGE_THRESHOLD + 1}px)`;
@@ -19,7 +19,7 @@ export const getPrimaryGradientColor = (theme: AppTheme): string => (
   isDarkMode ? theme.palette.primary.dark : theme.palette.primary.main
 );
 
-export const getShadowColor = (): string => (isDarkMode ? 'darkslategray' : 'gray');
+export const getShadowColor = (): string => (isDarkMode ? 'black' : 'gray');
 
 export const appTheme = createTheme({
   palette: {
@@ -28,9 +28,9 @@ export const appTheme = createTheme({
     secondary: cyan,
     common: {
       white: 'white',
-      black: 'black'
+      black: '#121212'
     },
-    grey: blueGrey
+    grey
   },
   typography: {
     fontFamily: [
@@ -50,10 +50,10 @@ export const appTheme = createTheme({
       margin: 0,
       textAlign: 'center',
       [LARGE_MEDIA_QUERY]: {
-        fontSize: '80px'
+        fontSize: '64px'
       },
       [MEDIUM_MEDIA_QUERY]: {
-        fontSize: '56px'
+        fontSize: '52px'
       },
       [SMALL_MEDIA_QUERY]: {
         fontSize: '44px'
@@ -76,7 +76,7 @@ export const appTheme = createTheme({
       fontWeight: 500,
       margin: 0,
       textAlign: 'center',
-      color: isDarkMode ? blueGrey[100] : blueGrey[900],
+      color: isDarkMode ? grey[100] : grey[900],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '40px'
       },
@@ -91,7 +91,7 @@ export const appTheme = createTheme({
       fontWeight: 500,
       margin: 0,
       textAlign: 'left',
-      color: isDarkMode ? blueGrey[200] : blueGrey[900],
+      color: isDarkMode ? grey[100] : grey[900],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '32px'
       },
@@ -105,7 +105,7 @@ export const appTheme = createTheme({
     subtitle2: {
       fontWeight: 400,
       margin: 0,
-      color: isDarkMode ? blueGrey[300] : blueGrey[800],
+      color: isDarkMode ? grey[200] : grey[800],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '24px'
       },
@@ -120,7 +120,7 @@ export const appTheme = createTheme({
       fontWeight: 700,
       margin: 0,
       textAlign: 'left',
-      color: isDarkMode ? blueGrey[300] : blueGrey[800],
+      color: isDarkMode ? grey[200] : grey[800],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '20px'
       },
@@ -134,7 +134,7 @@ export const appTheme = createTheme({
     h5: {
     },
     h6: {
-      color: isDarkMode ? blueGrey[200] : blueGrey[900],
+      color: isDarkMode ? grey[100] : grey[900],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '24px'
       },
@@ -148,7 +148,7 @@ export const appTheme = createTheme({
     body1: {
       textAlign: 'justify',
       margin: '10px 0',
-      color: isDarkMode ? blueGrey[400] : blueGrey[700],
+      color: isDarkMode ? grey[100] : grey[900],
       [LARGE_MEDIA_QUERY]: {
         fontSize: '18px'
       },
