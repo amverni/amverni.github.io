@@ -1,1 +1,19 @@
-More info coming soon...
+On the Bing Enterprise Search UX team, I worked on 
+[Microsoft Search](https://www.microsoft.com/en-us/edge/features/microsoft-search?form=MT0160) and 
+[Bing Chat Enterprise](https://www.microsoft.com/en-us/microsoft-365/blog/2023/07/18/introducing-bing-chat-enterprise-microsoft-365-copilot-pricing-and-microsoft-sales-copilot/).
+Below are some of the highlights.
+
+#### Bing Chat Enterprise
+* Developed the admin controls page to manage settings for private and public preview across hundreds of tenants.
+* Built the home page for the initial launch by extending the consumer Bing Chat experience and integrating custom branding and data‑protection content.
+
+#### Microsoft Search
+* Reduced initial bundle size by 22% on average by only including logic required for the given hosting canvas.
+* Improved page load time by 130 ms by introducing AJAX requerying to avoid reloading the app during multi‑query sessions.
+* Increased video search result impressions by 13% and click‑through rate by 94% by building the Videos vertical used in 
+Microsoft Search in Bing, Microsoft Search in Office, and Microsoft Stream.
+* Led a group of six developers in refactoring hero answers to be shared across Microsoft Search endpoints 
+(Bing, Office, and Windows), creating a uniform customer experience and reducing development costs.
+* Designed an end‑to‑end testing framework to validate UX visuals, functionality, accessibility, and instrumentation. 
+Led a cross‑functional team in identifying critical user scenarios and guided three developers in writing tests that 
+gated PRs with a 99% pass rate.

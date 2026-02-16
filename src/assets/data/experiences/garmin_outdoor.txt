@@ -1,9 +1,9 @@
-During the summer of 2019, I returned to Garmin, this time in the Outdoor department, 
-on the high-level software team responsible for the outdoor smartwatches. 
-The focus of my internship was developing graphical representations of in-activity metrics 
-for the next generation of outdoor and fitness smartwatches. 
-In other words, I created data fields that included gauges, graphs, dials, etc. to visually 
-represent the data available to the customer during activities. 
-Another feature that I worked on was implementing stealth mode on the Instinct Tactical. 
-This feature hides GPS data from external use in order to comply with military regulations 
+I worked on the Outdoor department’s software team building the UI for smartwatches.
+* I developed graphical representations of in-activity metrics for fēnix, MARQ, and Forerunner smartwatch lines. 
+This included creating responsive gauges, graphs, etc. to visually represent activity data optimized for low resource 
+scenarios. I worked closely with the customer experience team because this feature was critical in the marketing 
+campaign for the next generation of outdoor and fitness smartwatches.
+* I implemented [Stealth Mode](https://support.garmin.com/en-US/?faq=DICH3z8gRR82YcOoyTHpV7) on the Instinct Tactical 
+which disabled all wireless communication with the watch (e.g., GPS) in order to comply with military regulations 
 while still allowing all on-device features to remain functional.
+* I built an app to highlight watch functionality to customers while in demo mode at stores.

@@ -60,7 +60,8 @@ export const experienceData: ExperienceInfos = {
       }
     },
     {
-      title: 'Software Engineer 2, Software Engineer',
+      title: 'Software Engineer 2',
+      previousTitles: ['Software Engineer'],
       entity: {
         name: 'Microsoft',
         location: 'Redmond, WA',
@@ -71,7 +72,7 @@ export const experienceData: ExperienceInfos = {
         endDate: new Date('06/30/2024')
       },
       descriptionFilename: microsoftEnterpriseSearchDescription,
-      skills: ['React', 'Web Components', 'JavaScript', 'Fluent UI', 'Storybook', 'Jest'],
+      skills: ['React', 'Web Components', 'JavaScript', 'Fluent UI', 'Storybook', 'Jest', 'Playwright', 'ASP.NET'],
       image: {
         src: bingChatEnterprise,
         alt: 'Bing Chat Enterprise UX snippet',
@@ -93,7 +94,7 @@ export const experienceData: ExperienceInfos = {
         endDate: new Date('06/03/2022')
       },
       descriptionFilename: microsoftIdentityDescription,
-      skills: ['Typescript', 'KnockoutJS', 'React', 'C#', 'Sinon', 'Jasmine', 'Mocha', 'HTML', 'CSS', 'Azure Pipelines', 'Git'],
+      skills: ['Typescript', 'KnockoutJS', 'React', 'C#', 'Sinon', 'Jasmine', 'Mocha', 'HTML', 'CSS', 'Azure Pipelines'],
       image: {
         src: microsoftLogo,
         alt: 'Microsoft logo',

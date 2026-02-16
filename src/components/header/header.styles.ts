@@ -99,6 +99,7 @@ export const useStyles = makeStyles<AppTheme, HeaderStylesProps>((theme) => ({
     justifyContent: 'center'
   },
   descriptor: {
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    margin: '0 5px'
   }
 }));

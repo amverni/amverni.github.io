@@ -1,11 +1,11 @@
-For my first internship I worked at Garmin International in the Automotive OEM department 
-as a software engineer intern during the summer of 2018.
-I was on the navigation app UI team and I primarily worked on building developer tools to 
-increase productivity. My first major project was to create a tool to automatically download 
-all libraries necessary for debugging off of an automotive head unit after a software crash.
-This effectively eliminated a 15 minute manual step from the debugging proces. 
-Next, I worked on automatically creating log files when developers inserted a flashdrive into 
-the head unit in order to record any problems that occured in field testing.
-My largest project was to develop an automated testing framework to simulate interactions between 
-Garmin's navigation app and the rest of the head unit. 
-I also implemented multiple customer facing features such as providing screenshot previews of map locations.
+I worked at Garmin International in the Automotive OEM department as a software engineer intern during the summer of 2018. 
+I was on the navigation app UI team and I worked on building end-to-end test infrastructure, developer tools to increase 
+productivity, and some small user faces features.
+* I created the infrastructure for a cross-language, automated testing framework.
+I implemented the ability to simulate user interactions on the automotive head unit that would send the corresponding 
+signals to Garmin's navigation app. This was the base for all other developers' automated tests.
+* I built a tool to automatically download all libraries necessary for off-unit debugging of an on-unit core dump after 
+a software crash. This eliminated a 15-minute manual step from every debugging session.
+* I built a tool which automatically saved log files when it detected a flash drive was inserted into the head unit 
+during field testing.
+* I implemented a feature to provide previews of map locations during a user’s location search.

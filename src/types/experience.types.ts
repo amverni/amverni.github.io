@@ -1,7 +1,9 @@
 import { CSSProperties } from 'react';
+import { ListAtLeastOne } from './utils.types';
 
 export type ExperienceInfo = {
   title: string;
+  previousTitles?: ListAtLeastOne<string>;
   entity?: {
     name: string;
     location: string;
@@ -13,7 +15,7 @@ export type ExperienceInfo = {
   };
   note?: string;
   descriptionFilename: string;
-  skills?: [string, ...string[]];
+  skills?: ListAtLeastOne<string>;
   image: {
     src: string;
     alt: string;
@@ -22,15 +24,15 @@ export type ExperienceInfo = {
   };
 }
 
-export type WorkExperienceInfo = Required<Omit<ExperienceInfo, 'note'>>;
+export type WorkExperienceInfo = Omit<ExperienceInfo, 'note'>;
 
-export type ResearchExperienceInfo = Required<Omit<ExperienceInfo, 'note'>>;
+export type ResearchExperienceInfo = Omit<ExperienceInfo, 'note' | 'previousTitles'>;
 
-export type LeadershipExperienceInfo = Required<Omit<ExperienceInfo, 'note' | 'skills'>>;
+export type LeadershipExperienceInfo = Omit<ExperienceInfo, 'note' | 'skills' | 'previousTitles'>;
 
-export type EducationExperienceInfo = Required<Omit<ExperienceInfo, 'note'>> & ExperienceInfo;
+export type EducationExperienceInfo = Omit<ExperienceInfo, 'previousTitles'>;
 
-export type ProjectExperienceInfo = ExperienceInfo;
+export type ProjectExperienceInfo = Omit<ExperienceInfo, 'previousTitles'>;
 
 export type ExperienceInfos = {
   workExperiences: WorkExperienceInfo[];

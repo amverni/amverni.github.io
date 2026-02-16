@@ -1,9 +1,15 @@
-I currently work on the Azure Privileged Identity Management team where I help keep millions of users' 
-identities secure in their day-to-day work.
-I am mainly focused on front-end web development which allows me to pursue my passion for creating impactful user interfaces.
-I am also exploring how our team can migrate from KnockoutJS to React within the constraints of internal frameworks 
-in order to have a more performant and maintainable service.
-I recently redesigned our team's end to end UI test project to increase reliability and maintainability through
-statelessness and object-oriented paradigms such as abstraction, encapsulation, and polymorphism.
-Additionally, I am improving our onboarding process by developing more robust documentation, a concrete on-call 
-training guide, and serving as an onboarding buddy and mentor for our newest engineers.
+I worked on the Azure Privileged Identity Management team where I helped keep millions of users' identities 
+secure in their day-to-day work. I focused on frontend web development which allowed me to pursue my passion 
+for creating impactful user interfaces, but needed knowledge of the entire system to allow for effective on-call 
+shifts. Here are a few highlights:
+* Migrated team's pages in the Azure Portal to use Microsoft Graph APIs with no visual or functional regressions.
+* Created a proof of concept for the team to move from KnockoutJS to React (within the constraints of internal 
+frameworks in order) to have a more performant and maintainable service.
+* Redesigned our team's end-to-end UI test project to increase reliability in order to replace weekly manual 
+deployment validations with automated checks. (I achieved this by improving the stability and maintainability 
+of the tests. Following the principle of statelessness, I removed the interaction between test runs by having the 
+test framework perform setup and tear-down between test suite runs. I also reduced the learning curve for writing 
+tests by abstracting common functionality into the framework (e.g., sign-in) and into helper functions (e.g., 
+simulated user interactions).
+* Improved our onboarding process by developing more robust documentation, a concrete on-call training guide, 
+and serving as an onboarding buddy and mentor for one new engineer.

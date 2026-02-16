@@ -20,6 +20,7 @@ const Link = (props: LinkProps): JSX.Element => <MuiLink underline="none" {...pr
 export const Experience: React.FC<ExperienceProps> = ({
   experienceInfo: {
     title,
+    previousTitles,
     entity: entityData,
     timeline,
     note: noteData,
@@ -57,6 +58,13 @@ export const Experience: React.FC<ExperienceProps> = ({
 
   const timerange = timeline && (
     <p className={styles.subtitle}>{stringifyDateRange(timeline.startDate, timeline.endDate)}</p>
+  );
+
+  const otherTitles = previousTitles && (
+    <p className={styles.subtitle}>
+      {'Previous roles: '}
+      {previousTitles.join(', ')}
+    </p>
   );
 
   const note = noteData && (
@@ -127,6 +135,7 @@ export const Experience: React.FC<ExperienceProps> = ({
         {header}
         {entity}
         {timerange}
+        {otherTitles}
         {note}
         <CollapsibleContainer collapsedHeight={COLLAPSED_HEIGHT}>
           {description}
