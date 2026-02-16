@@ -1,0 +1,21 @@
+In the winter semester of 2019, I took Conversational Artificial Intelligence as my senior design class.
+Working with [Clinc](https://clinc.com/) and a small group of students, I built
+[My Instructional Assistant (Mia)](https://docs.google.com/presentation/d/1fH7zBtLAE_brbpPvGrfjnIudYgc8P53vFjYzqvAg0LI/edit?usp=sharing)
+which is a virtual assistant to tutor students in basic mathematics (primarily the four basic operators).
+Mia's capabilities include giving concept explanations, providing example problems with solutions,
+providing practice problems, checking the correctness of answers, and walking students through the solutions of problems.
+
+Within this project I focused on three main tasks.
+First, I created the UI for the project which was a simple client-side dynamic web page.
+The page had a chatbot-style compoent for users to input (via speech or text) queries and a "chalkboard"
+for displaying math problems.
+
+Second, I designed the state machine that the Clinc platform uses to model conversations.
+This defined how conversations would flow by defining acceptable responses at each point in a conversation
+and defining how types of responses would transition users from one conversation state to another.
+
+Lastly, I performed the data curation needed for training Clinc's machine learning models.
+I collected sample queries, classified the query by the type of question (e.g. concept explanation request,
+example problem request, etc.), and labelled the correct data extraction from the query (e.g. extracting the
+concept from a concept explanation request). This had to be done for thousands of data points so I utilized
+crowdsourcing via Amazon Mechanical Turk.

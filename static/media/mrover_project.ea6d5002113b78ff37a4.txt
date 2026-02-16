@@ -1,0 +1,81 @@
+The [Michigan Mars Rover Team (MRover)](https://mrover.org) is a student run team comprised of individuals across various 
+disciplines at the University of Michigan that designs, builds, and tests a mars rover for competition 
+at the [University Rover Challenge](https://urc.marssociety.org) every summer. 
+I joined MRover in the fall of 2017 during my sophomore year and worked with the team in various roles 
+over my four and a half years on the team.
+
+In my first year, I joined the Autonomous Navigation subteam where I, along with two other members, was 
+tasked with developing the service that executed all navigation logic for the autonomous mode of the rover. 
+The main goal was to develop code to autonomously drive our rover between marked waypoints avoiding any 
+obstacles in our path given GPS coordinates that were up to 10 meters away from the waypoints. 
+Under our implementation, once at the GPS coordinate we would perform a search for the waypoint marker. 
+This was an extremely challenging project for us as neither my teammates nor I had ever worked on components 
+in such a large project before. 
+As we were approaching the end of my first season on the team, we had made 
+a ton of progress however the complexity of our project had grown so much that anytime we went to add features, 
+we would spend twice as long debugging and fixing what broke by adding the feature. 
+After a while of this, I sat down with our chief software engineer to discuss how we could better approach 
+the problem to avoid this issue. 
+We decided that using a finite state machine would be a better implementation as it would allow us to model 
+our infinitely complex task as a finite set of states. 
+This gave us the ability to track our state transitions at every instant which allowed us to more quickly 
+identify the set of inputs that was causing unintended behavior in our code. 
+While this refactor was likely best for the long term, it was a large undertaking and we were quickly 
+approaching a critical deadline. Knowing how inefficiently we were currently working, I decided to take 
+on more responsibility and perform the refactor myself. 
+After completing this, I gained a strong sense of ownership of the navigation service and quickly became 
+the expert on the subject within our team. A few weeks later I earned one of the greatest feelings of 
+accomplishment I’ve ever felt when I clicked the “on” button and saw the rover successfully turn and 
+drive to a GPS waypoint in the back parking lot of our machine shop.
+
+In large part because of my initiative here and my drive to keep pushing the team to build a better 
+autonomy system, I was named the Autonomous Navigation Lead for the following season and earned myself an 
+invitation to come to competition. Competition gave us some key insights to focus on for the next season. 
+While autonomy mode worked extremely well in our custom built simulator, the integration with the computer 
+vision system and odometry sensors limited our performance. Thus, I turned our focus for the following year 
+to improving the robustness of the system in the real world despite having imperfect inputs. 
+This led to three major improvements to the autonomous navigation system in my second year on the team. 
+First, we improved our navigation algorithms. We gutted our search algorithm and redesigned it to work in 
+a way that handled false-positive without discarding previous work done, and reduced false-negatives, 
+by adding strategic pauses. These pauses made an incredible difference because, by sitting motionless for 
+a few seconds, we gave our computer vision service a chance to view our surroundings while the rover was 
+still (and thus the camera was stabilized). 
+While this was a simple feature to add, it was not easy to determine it was necessary because we did not 
+do enough testing outside of our simulator that first season. 
+The second improvement we made was to increase the accuracy of our odometry data. 
+To achieve this, I designed a sensor fusion algorithm to calculate location and heading estimates. 
+The algorithm calculated multiple estimates and weigh them based on our confidence in the sensors used for each estimate. 
+For example, instead of relying on just our IMU to calculate current heading, we obtained a second 
+estimate through our GPS and accelerometer. 
+We used the GPS’s track angle to determine the absolute heading while we were driving and we found the 
+change in heading while we were turning using the accelerometer. 
+By relying on more sensors, we became less likely to have inaccurate results in theory and this 
+proved to be true in our testing. 
+This also mitigated the risk of a sensor failing as we could detect a sensor failure and set the weight 
+of the estimate(s) based on that sensor to zero.
+The third improvement was to decrease our reliance on a single computer vision sensor for obstacle detection.
+I initiated our team’s research into ultrasonic and time of flight sensors which could be used alongside our 
+stereoscopic camera.
+Since these were cheaper sensors than a stereoscopic camera, it also opened the door for using multiple of 
+them in different positions.
+This aided in detecting steep drop-offs that we wanted the rover to avoid.
+After initial research I transitioned this project to some younger members.
+
+These efforts proved to be well worth it as our team performed very well this year at competition achieving 
+third place in the autonomy task, our best finish in team history.
+More details on my role as the Autonomous Navigation Lead from a less technical perspective can be found in 
+the Autonomous Navigation Lead section.
+
+My third year on the team I transitioned to being the lead software technical advisor.
+Details about my role in this position from a less technical perspective can be found in the Software Technical Advisor section.
+This position also came with many technical challenges as well.
+First, I had to learn more about the infrastructure of our software system so that I could help maintain it.
+For example we use a custom build tool that manages dependencies that I add features to as the team’s needs change.
+Another technical project that I’ve worked on in this role is building the second version of the autonomous 
+navigation simulator web application (picturedto the right).
+The largest problem with our original simulator was that it had a very large learning curve and therefore 
+to most people on the team it was a black box that people were afraid to touch.
+So I refactored it using a modern web framework, Vue.
+I also used TypeScript and ESLint in order to reduce the risk of members new to web development from making some 
+of the common mistakes of JavaScript.
+This refactor also allowed me to more easily add new features to the simulator such as adding noise to our simulated sensors.

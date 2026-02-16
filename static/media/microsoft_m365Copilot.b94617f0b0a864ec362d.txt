@@ -1,0 +1,21 @@
+I'm currently a tech lead in the M365 Copilot UX org on a team that owns the response section infrastructure
+and several key features across all desktop canvases (e.g., Web, Windows, Teams, etc.). Here are some of the highlights.
+
+* I designed a new architecture for the response section of the app that allows for improved scalability, monitoring,
+and performance. The architecture has been partially rolled out; so far it has led to a 2% increase in first token latency,
+8% increase in final token latency, and an 88% reduction in renders.
+* I am the tech lead for the Voice Chat feature which is currently user by over 10,000 customers per day.
+I also designed a WebRTC Client interface to support the long-lived server connection needed for a Voice Chat
+that is extensible to other features such as the computer-use agent.
+* Led effort to re-implement the enterprise web-grounded Copilot experience (i.e., Bing Chat Enterprise)
+in the M365 Copilot tech stack.
+We improved page load time by 5 seconds, improved availability by 2 percentage points,
+and had no high severity incidents.
+I collaborated with stakeholders from across multiple orgs to ensure launch at Microsoft Ignite 2024 included 
+no feature takebacks relative to both Bing Chat Enterprise and the M365-data-grounded Copilot.
+* I am the lead DRI champion for a team of about 40 engineers. I led the effort to establish the DRI team's processes
+in January 2025 and the team currently maintains a stable rotation averaging less than 12 incidents transitioned each week
+and averaging less than 2 high severity incidents per week. Both stats lead the org despite our DRI team having the 
+second largest scope.
+* Built debugging tool to simulate varied user licenses and admin settings to facilitate testing of new features across
+user scenarios.

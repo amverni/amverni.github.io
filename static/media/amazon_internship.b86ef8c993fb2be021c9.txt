@@ -1,0 +1,17 @@
+I interned at Amazon for the summer of 2020 working on the Offer Listing Service team 
+within the eCommerce Foundation group.
+I was tasked with building an audit tool to track historical data to allow my team's 
+customers to easily query and visualize changes to that data. To implement my solution, 
+I used AWS cloud computing technologies in order to handle large volumes of incoming 
+traffic (the tool is currently handling over 500 transactions per second). I was able to 
+enable continuous deployment of the tool by leveraging industry leading DevOps practices.
+This project was densley packed with learning opportunities. After the design phase, 
+I presented multiple options along with my proposed design which I had settled on after multiple 
+discussions with my teammates.
+This design meeting was a big wake-up call for me.
+Over the first few weeks of my internship I spent a lot of time fully understanding the problem 
+I was trying to solve, however I failed to fully view the problem from the perspective of my 
+customers which was a point drilled home at my design review. Moving forward, I had multiple 
+meetings with my customers throughout the remainder of my internship which proved vital for 
+building a product that they wanted to use. On the more technical side of things I learned 
+many new skills involved in writing enterprise level software such as injection and mocking for unit testing.

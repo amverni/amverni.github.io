@@ -1,0 +1,23 @@
+When I joined the [Michigan Mars Rover Team (MRover)](https://mrover.org/), I was first beginning 
+my career as a computer scientist. 
+Over the first three I had grown both technically and personally through contributing to the development 
+of the rover's codebase. 
+A large part of my learning came through the mentorship of more senior members on the team. 
+My last year and a half, I was one of the most seniored members on the team and I loved being able to give 
+back to the team by passing on my knowledge to younger members. 
+I did this through both providing one-on-one mentoring to students and by presenting technical material to the team. 
+I was also tasked with providing feedback at design reviews and advising the new team leadership based on my past 
+experiences on the team.
+
+Another key responsibility of being a technical advisor was looking at improving the team from a big picture perspective. 
+Instead of being primarily concerned with making sure our team scored as high as possible at the current year’s competition, 
+I focused on the long term growth and success of the team. Some ways I did this was helping restructure the team where 
+necessary as we grew, aiding the team by influencing technical and non-technical projects that allowed us to become more 
+sophisticated and fight stagnation, and increasing member retention. One example is that I introduced new project management 
+strategies into our workflow. 
+We used GitHub to manage our codebase which has many built in features for managing projects such as issue tracking. 
+Thus, it was a natural transition to start using these features with our existing projects. 
+I first prototyped my proposed workflow with a project I was working on to get a proof of concept and then helped the 
+software leads start using them for their projects. 
+This improved our ability to track the progress of our work and delegate tasks to members. 
+This also facilitated our transition to remote work during the pandemic.
