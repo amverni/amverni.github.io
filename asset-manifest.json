@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.54688909.js",
+    "main.js": "/static/js/main.a61000f4.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/website.png": "/static/media/website.7e4a8611087ac2f4e237.png",
     "static/media/hockeyStickTable.jpg": "/static/media/hockeyStickTable.db0f7b00643838ab4110.jpg",
@@ -46,10 +46,10 @@
     "static/media/michigan_masters.txt": "/static/media/michigan_masters.f189a056b7eaa1453606.txt",
     "static/media/personalWebsite.txt": "/static/media/personalWebsite.f8bfddc9d1f60eb99be3.txt",
     "static/media/hockeyStickTable.txt": "/static/media/hockeyStickTable.259fbe551fad55d93915.txt",
-    "main.54688909.js.map": "/static/js/main.54688909.js.map",
+    "main.a61000f4.js.map": "/static/js/main.a61000f4.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.54688909.js"
+    "static/js/main.a61000f4.js"
   ]
 }
