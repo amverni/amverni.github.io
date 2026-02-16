@@ -19,10 +19,10 @@ const ROUTES: RouteInfo[] = [
     path: 'experiences',
     title: 'Experiences'
   },
-  {
-    path: 'projects',
-    title: 'Projects'
-  },
+  // {
+  //   path: 'projects',
+  //   title: 'Projects'
+  // },
   {
     path: 'publications',
     title: 'Publications'
